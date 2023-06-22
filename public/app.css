@@ -1,0 +1,40 @@
+.navbar, .offcanvas-body, .offcanvas-header {
+    background-color: #262526;
+}
+
+.brand_logo {
+    max-width: 10em;
+}
+
+.nav-link, .offcanvas-title {
+    color: #f2f2f2;
+}
+
+.nav-link:hover {
+    color: #f2f2f2;
+    text-decoration: underline;
+}
+
+.navConnection {
+    color: #D92332;
+}
+
+.navConnection:hover {
+    color: #D92332;
+    text-decoration: underline;
+}
+
+.navConnection:focus {
+    color: #D92332;
+    text-decoration: underline;
+}
+
+.bg-danger {
+    color: #D92332;
+    background-color: #D92332;
+}
+
+footer {
+    background-color: #262526;
+    color: #D9777F;
+}
