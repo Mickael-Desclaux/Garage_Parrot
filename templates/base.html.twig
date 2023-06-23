@@ -35,7 +35,7 @@
 						<div class="offcanvas-body">
 							<ul class="navbar-nav justify-content-around flex-grow-1 pe-3">
 								<li class="nav-item">
-									<a class="nav-link ms-5 me-5 fs-5" href="/home">Accueil</a>
+									<a class="nav-link ms-5 me-5 fs-5" href="/">Accueil</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link ms-5 me-5 fs-5" href="#">Nos voitures</a>
@@ -43,67 +43,88 @@
 								<li class="nav-item">
 									<a class="nav-link ms-5 me-5 fs-5" href="#">Vos avis</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link ms-5 me-5 fs-5 navConnection" href="#">
-										Connexion
-									</a>
-								</li>
-							</ul>
+								{% if app.user %}
+									<li class="nav-item">
+										<a class="nav-link ms-5 me-5 fs-5 navConnection" href="/logout">
+											Mon espace
+										</a>
+									</li>
+								{% endif %}
+
+									{% if app.user %}
+										<li class="nav-item">
+											<a class="nav-link ms-5 me-5 fs-5 navConnection" href="/logout">
+												Déconnexion
+											</a>
+										</li>
+									{% else %}
+										<li class="nav-item">
+											<a class="nav-link ms-5 me-5 fs-5 navConnection" href="/login">
+												Connexion
+											</a>
+										</li>
+									{% endif %}
+								</ul>
+							</div>
 						</div>
 					</div>
+				</nav>
+			{% endblock %}
+			<div class="container"> {% block body %}{% endblock %}
 				</div>
-			</nav>
-		{% endblock %}
-		<div class="container"> {% block body %}{% endblock %}
-			</div>
+				{% block footer %}
+				</body>
+				<footer class="fixed-bottom">
+					<div class="container-fluid pt-3 pb-3 d-flex justify-content-center">
+						<table>
+							<thead>
+								<tr>
+									<th>
+										<h3>Horaires d'ouverture :</h3>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Lundi :</td>
+									<td>08:45 - 12:00, 14:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td>Mardi :</td>
+									<td>08:45 - 12:00, 14:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td>Mercredi :</td>
+									<td>08:45 - 12:00, 14:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td>Jeudi :</td>
+									<td>08:45 - 12:00, 14:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td>Vendredi :</td>
+									<td>08:45 - 12:00, 14:00 - 18:00</td>
+								</tr>
+								<tr>
+									<td>Samedi :</td>
+									<td>08:45 - 12:00</td>
+								</tr>
+								<tr>
+									<td>Dimanche :</td>
+									<td>Fermé</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</footer>
+			{% endblock %}
 		</body>
-		<footer>
-			<div class="container-fluid pt-3 pb-3 d-flex justify-content-center">
-				<table>
-					<thead>
-						<tr>
-							<th><h3>Horaires d'ouverture :</h3></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Lundi :</td>
-							<td>08:45 - 12:00, 14:00 - 18:00</td>
-						</tr>
-						<tr>
-							<td>Mardi :</td>
-							<td>08:45 - 12:00, 14:00 - 18:00</td>
-						</tr>
-						<tr>
-							<td>Mercredi :</td>
-							<td>08:45 - 12:00, 14:00 - 18:00</td>
-						</tr>
-						<tr>
-							<td>Jeudi :</td>
-							<td>08:45 - 12:00, 14:00 - 18:00</td>
-						</tr>
-						<tr>
-							<td>Vendredi :</td>
-							<td>08:45 - 12:00, 14:00 - 18:00</td>
-						</tr>
-						<tr>
-							<td>Samedi :</td>
-							<td>08:45 - 12:00</td>
-						</tr>
-						<tr>
-							<td>Dimanche :</td>
-							<td>Fermé</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</footer>
 	</html>
-    {#<li>lundi : 08:45 - 12:00, 14:00 - 18:00</li>
-	<li>mardi : 08:45 - 12:00, 14:00 - 18:00</li>
-	<li>mercredi : 08:45 - 12:00, 14:00 - 18:00</li>
-	<li>jeudi : 08:45 - 12:00, 14:00 - 18:00</li>
-	<li>vendredi : 08:45 - 12:00, 14:00 - 18:00</li>
-	<li>samedi : 08:45 - 12:00</li>
-	<li>dimanche : Fermé</li>#}
+	{#<li>lundi : 08:45 - 12:00, 14:00 - 18:00</li>
+			<li>mardi : 08:45 - 12:00, 14:00 - 18:00</li>
+			<li>mercredi : 08:45 - 12:00, 14:00 - 18:00</li>
+			<li>jeudi : 08:45 - 12:00, 14:00 - 18:00</li>
+			<li>vendredi : 08:45 - 12:00, 14:00 - 18:00</li>
+			<li>samedi : 08:45 - 12:00</li>
+			<li>dimanche : Fermé</li>#}
 
