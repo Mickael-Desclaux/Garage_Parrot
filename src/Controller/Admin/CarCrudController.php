@@ -3,7 +3,6 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Car;
-use App\Entity\CarImage;
 use App\Form\CarImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
@@ -20,28 +19,37 @@ class CarCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        yield TextField::new('brand');
-        yield TextField::new('model');
-        yield IntegerField::new('year');
-        yield IntegerField::new('mileage');
+        yield TextField::new('brand')->setLabel('Marque');
+
+        yield TextField::new('model')->setLabel('Modèle');
+
+        yield IntegerField::new('year')->setLabel('Année');
+
+        yield IntegerField::new('mileage')->setLabel('Kilométrage');
+
         yield ChoiceField::new('energy')->setChoices([
             "Essence" => "Essence",
             "Gazole" => "Gazole",
             "Électrique" => "Électrique",
             "Hybride" => "Hybride",
-        ]);
+        ])->setLabel('Énergie');
+
         yield ChoiceField::new('gearbox')->setChoices([
             "Manuelle" => "Manuelle",
             "Automatique" => "Automatique",
-        ]);
+        ])->setLabel('Boîte de vitesses');
+
         yield ChoiceField::new('doors')->setChoices([
             2 => 2,
             3 => 3,
             4 => 4,
             5 => 5,
-        ]);
-        yield IntegerField::new('horsepower');
+        ])->setLabel('Nombre de portes');
+
+        yield IntegerField::new('horsepower')->setLabel('Puissance (ch)');
+
         yield IntegerField::new('price')->setLabel("Prix");
+
         yield CollectionField::new('CarImages')->setLabel("Images")
         ->setEntryType(CarImageType::class);
     }
