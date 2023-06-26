@@ -34,11 +34,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     //private $cars;
 
     private $passwordHasher;
+
+    #[ORM\OneToMany(targetEntity: "App\Entity\Car", mappedBy: "user")]
+    private $car;
     
     public function __construct(UserPasswordHasherInterface $passwordHasher) {
         $this->passwordHasher = $passwordHasher;
         $this->roles = ['ROLE_USER'];
-        //$this->cars = new ArrayCollection();
+        $this->car = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -108,5 +111,23 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * Get the value of car
+     */
+    public function getCar()
+    {
+        return $this->car;
+    }
+
+    /**
+     * Set the value of car
+     */
+    public function setCar($car): self
+    {
+        $this->car = $car;
+
+        return $this;
     }
 }
