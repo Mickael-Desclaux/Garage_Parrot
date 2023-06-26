@@ -8,14 +8,16 @@
 			<div class="card m-5" style="width: 20rem;">
 
 				{% if car.image %}
-					<img src={{car.image}} alt={{car.brand}}>
+					<img src={{car.image}} alt={{car.model}}>
 				{% endif %}
 				<div class="card-body">
 
 					{% if car.brand %}
-						<h5 class="card-title text-center">{{car.brand}}</h5>
+						<h5 class="card-title text-center">{{car.brand ~ " " ~ car.model}}</h5>
 					{% endif %}
-					<p class="card-text text-center">{{car.model}}</p>
+					<p class="card-text text-center">{{car.year}}</p>
+                    <p class="card-text text-center">{{car.price ~ "€"}}</p>
+                    <a href="{{path('voiture_detail', {id: car.id}) }}" class="btn btn-danger stretched-link d-flex justify-content-center">Détails</a>
 				</div>
 			</div>
 		{% endfor %}

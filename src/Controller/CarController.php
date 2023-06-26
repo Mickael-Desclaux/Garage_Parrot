@@ -22,7 +22,12 @@ class CarController extends AbstractController
         ]);
     }
 
-    #[Route('/voitures/ajouter')]
+    #[Route('/nos_voitures/{id}', name: "voiture_detail")]
+    public function showDetails(Car $car) {
+        return $this->render('car/detail.html.twig', ['car' => $car]);
+    }
+
+    #[Route('/nos_voitures/ajouter')]
     public function add(Request $request, ManagerRegistry $doctrine): Response
     {
         $car = new Car();
