@@ -1,25 +1,51 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 
+{% block title %}Liste de voitures
+{% endblock %}
 
 {% block body %}
 
 	<div class="d-flex justify-content-around flex-wrap container mt-5">
 		{% for car in cars %}
 			<div class="card m-5" style="width: 20rem;">
+				{% for image in car.carImages %}
+					{% if image.name %}
+						<img src="{{ asset('images/cars/' ~ image.name) }}" alt="{{ car.brand }} {{ car.model }}" style="max-width: 10rem;">
+					{% endif %}
+				{% endfor %}
 
-				{% if car.image %}
-					<img src={{car.image}} alt={{car.model}}>
-				{% endif %}
 				<div class="card-body">
 
 					{% if car.brand %}
 						<h5 class="card-title text-center">{{car.brand ~ " " ~ car.model}}</h5>
 					{% endif %}
 					<p class="card-text text-center">{{car.year}}</p>
-                    <p class="card-text text-center">{{car.price ~ "€"}}</p>
-                    <a href="{{path('voiture_detail', {id: car.id}) }}" class="btn btn-danger stretched-link d-flex justify-content-center">Détails</a>
+					<p class="card-text text-center">{{car.price ~ "€"}}</p>
+					<a href="{{path('voiture_detail', {id: car.id}) }}" class="btn btn-danger stretched-link d-flex justify-content-center">Détails</a>
 				</div>
 			</div>
 		{% endfor %}
 	</div>
 {% endblock %}
+
+{#{% block body %}
+    <h1>Liste de voitures</h1>
+    <ul>
+    {% for car in cars %}
+        <li>
+            <h2>{{ car.brand }} {{ car.model }}</h2>
+            <p>Année : {{ car.year }}</p>
+            <p>Kilométrage : {{ car.mileage }}</p>
+            <!-- Ajoutez plus de détails ici si vous le souhaitez -->
+            {% for image in car.carImages %}
+                <img src="{{ asset('public/images/cars') }}" alt="{{ car.brand }} {{ car.model }}">
+            {% else %}
+                <p>Pas d'images pour cette voiture.</p>
+            {% endfor %}
+        </li>
+    {% else %}
+        <li>Pas de voitures disponibles.</li>
+    {% endfor %}
+    </ul>
+{% endblock %}#}
+

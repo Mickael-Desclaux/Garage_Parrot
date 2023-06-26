@@ -26,25 +26,4 @@ class CarController extends AbstractController
     public function showDetails(Car $car) {
         return $this->render('car/detail.html.twig', ['car' => $car]);
     }
-
-    #[Route('/nos_voitures/ajouter')]
-    public function add(Request $request, ManagerRegistry $doctrine): Response
-    {
-        $car = new Car();
-
-        $form = $this->createForm(CarType::class, $car);
-
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $car->setUser($this->getUser());
-            $em = $doctrine->getManager();
-            $em->persist($car);
-            $em->flush();
-            return $this->redirectToRoute("car_list");
-        }
-
-        return $this->render('car/form.html.twig', [
-            'car_form' => $form->createView(),
-        ]);
-    }
 }

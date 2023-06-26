@@ -6,5 +6,10 @@
 
 <p>Marque: {{car.brand}}</p>
 <p>Modèle: {{car.model}}</p>
+{% for image in car.carImages %}
+	{% if image.name %}
+		<img src="{{ asset('images/cars/' ~ image.name) }}" alt="{{ car.brand }} {{ car.model }}" style="max-width: 20rem;">
+	{% endif %}
+{% endfor %}
 
 {% endblock %}
