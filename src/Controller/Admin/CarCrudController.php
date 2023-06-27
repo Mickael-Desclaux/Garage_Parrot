@@ -17,6 +17,14 @@ class CarCrudController extends AbstractCrudController
         return Car::class;
     }
 
+    public function createEntity(string $entityFqcn)
+    {
+        $car = new Car();
+        $car->setUser($this->getUser());
+
+        return $car;
+    }
+
     public function configureFields(string $pageName): iterable
     {
         yield TextField::new('brand')->setLabel('Marque');
