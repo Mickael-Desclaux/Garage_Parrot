@@ -5,7 +5,6 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -30,13 +29,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
-    private $passwordHasher;
-
     #[ORM\OneToMany(targetEntity: "App\Entity\Car", mappedBy: "user")]
     private $car;
     
-    public function __construct(UserPasswordHasherInterface $passwordHasher) {
-        $this->passwordHasher = $passwordHasher;
+    public function __construct() {
         $this->roles = ['ROLE_USER'];
         $this->car = new ArrayCollection();
     }
@@ -97,7 +93,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function setPassword(string $password): static
     {
-        $this->password = $this->passwordHasher->hashPassword($this, $password);
+        $this->password = $password;
         return $this;
     }
 

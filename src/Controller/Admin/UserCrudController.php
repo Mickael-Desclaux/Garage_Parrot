@@ -4,22 +4,49 @@ namespace App\Controller\Admin;
 
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityPersistedEvent;
+use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
-class UserCrudController extends AbstractCrudController
+class UserCrudController extends AbstractCrudController implements EventSubscriberInterface
 {
+    private UserPasswordHasherInterface $passwordHasher;
+
+    public function __construct(UserPasswordHasherInterface $passwordHasher)
+    {
+        $this->passwordHasher = $passwordHasher;
+    }
+
     public static function getEntityFqcn(): string
     {
         return User::class;
     }
 
-    /*
+    
     public function configureFields(string $pageName): iterable
     {
+        yield EmailField::new('email')->setLabel('Adresse E-Mail');
+        yield TextField::new('password')->setLabel('Mot de passe')->hideOnIndex();
+    }
+
+    public static function getSubscribedEvents()
+    {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            BeforeEntityPersistedEvent::class => ['hashPassword'],
         ];
     }
-    */
+
+    public function hashPassword(BeforeEntityPersistedEvent $event)
+    {
+        $entity = $event->getEntityInstance();
+
+        if (!($entity instanceof User)) {
+            return;
+        }
+        $entity->setPassword(
+            $this->passwordHasher->hashPassword($entity, $entity->getPassword())
+        );
+    }
 }
