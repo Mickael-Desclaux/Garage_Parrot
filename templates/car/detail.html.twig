@@ -11,5 +11,11 @@
 		<img src="{{ asset('images/cars/' ~ image.name) }}" alt="{{ car.brand }} {{ car.model }}" style="max-width: 20rem;">
 	{% endif %}
 {% endfor %}
+<div class="container">
+{{ form_start(contact_form) }}
+{{ form_row(contact_form.subject, {'attr': {'value': car.brand ~ ' ' ~ car.model}})}}
+{{ form_rest(contact_form) }}
+<input type="submit" class="btn btn-danger" value="Envoyer">
+</div>
 
 {% endblock %}

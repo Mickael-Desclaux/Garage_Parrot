@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Controller\Admin\CarCrudController;
 use App\Entity\Car;
 use App\Entity\CarImage;
+use App\Entity\Contact;
 use App\Entity\Review;
 use App\Entity\User;
 use Symfony\Component\HttpFoundation\Response;
@@ -37,6 +38,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Voitures', 'fas fa-list', Car::class);
         yield MenuItem::linkToCrud('Images', 'fas fa-image', CarImage::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
-        yield MenuItem::linkToCrud('Avis Clients', 'fas fa-list', Review::class);
+        yield MenuItem::linkToCrud('Avis Clients', 'fas fa-star', Review::class);
+        yield MenuItem::linkToCrud('Contacts', 'fas fa-list', Contact::class);
     }
 }

@@ -22,6 +22,9 @@ class Review
     #[ORM\Column]
     private ?int $note = null;
 
+    #[ORM\Column]
+    private ?bool $approved;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +62,18 @@ class Review
     public function setNote(int $note): static
     {
         $this->note = $note;
+
+        return $this;
+    }
+
+    public function isApproved(): ?bool
+    {
+        return $this->approved;
+    }
+
+    public function setApproved(?bool $approved): self
+    {
+        $this->approved = $approved;
 
         return $this;
     }

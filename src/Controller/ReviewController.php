@@ -16,6 +16,7 @@ class ReviewController extends AbstractController
     public function newReview(Request $request, ManagerRegistry $doctrine): Response
     {
         $review = new Review();
+        $review->setApproved(false);
 
         $form = $this->createForm(ReviewType::class, $review);
 

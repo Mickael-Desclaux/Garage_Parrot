@@ -7,6 +7,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 
 class ReviewCrudController extends AbstractCrudController
 {
@@ -15,6 +16,13 @@ class ReviewCrudController extends AbstractCrudController
         return Review::class;
     }
 
+    public function createEntity(string $entityFqcn)
+    {
+        $review = new Review();
+        $review->setApproved(false);
+
+        return $review;
+    }
 
     public function configureFields(string $pageName): iterable
     {
@@ -27,6 +35,7 @@ class ReviewCrudController extends AbstractCrudController
         4 => 4,
         5 => 5,
        ]);
+       yield BooleanField::new('approved');
     }
     
 }
