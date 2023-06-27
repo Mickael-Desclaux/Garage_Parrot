@@ -1,9 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
+<div>
 {{ form_start(review_form) }}
 {{ form_rest(review_form) }}
 <input type="submit" class="btn btn-danger" value="Publier">
+</div>
+
+<div class="d-flex justify-content-around flex-wrap container mt-5">
+		{% for review in pagination %}
+			<div class="card m-5" style="width: 20rem;">
+				<h2>{{ review.name }}</h2>
+
+				<div class="card-body">
+
+					{% if review.comment %}
+						<p class="card-title text-center">{{ review.comment }}</p>
+					{% endif %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	 <div class="container d-flex justify-content-center">
+	{{ knp_pagination_render(pagination) }}
+	</div>
 
 {% endblock %}

@@ -27,7 +27,7 @@ class Contact
     private ?string $lastname = null;
 
     #[ORM\Column]
-    private ?int $phone = null;
+    private ?string $phone = null;
 
     #[ORM\Column(length: 255)]
     private ?string $email = null;
@@ -60,18 +60,6 @@ class Contact
     public function setLastname(string $lastname): static
     {
         $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    public function getPhone(): ?int
-    {
-        return $this->phone;
-    }
-
-    public function setPhone(int $phone): static
-    {
-        $this->phone = $phone;
 
         return $this;
     }
@@ -120,6 +108,24 @@ class Contact
     public function setSubject($subject): self
     {
         $this->subject = $subject;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of phone
+     */
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set the value of phone
+     */
+    public function setPhone(?string $phone): self
+    {
+        $this->phone = $phone;
 
         return $this;
     }
