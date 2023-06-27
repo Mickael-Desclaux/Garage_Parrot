@@ -30,9 +30,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
-    //#[ORM\OneToMany(targetEntity: "App\Entity\Car", mappedBy: "user")]
-    //private $cars;
-
     private $passwordHasher;
 
     #[ORM\OneToMany(targetEntity: "App\Entity\Car", mappedBy: "user")]
