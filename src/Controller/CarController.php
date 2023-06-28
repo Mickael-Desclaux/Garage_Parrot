@@ -6,7 +6,6 @@ use App\Entity\Car;
 use App\Entity\Contact;
 use App\Form\ContactType;
 use App\Repository\CarRepository;
-use App\Repository\ContactRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;

@@ -6,7 +6,6 @@ use App\Entity\Car;
 use App\Entity\User;
 use App\Entity\Review;
 use App\Entity\Contact;
-use App\Entity\CarImage;
 use App\Entity\HomeContent;
 use App\Controller\Admin\CarCrudController;
 use App\Entity\OpeningHours;
@@ -21,9 +20,7 @@ class DashboardController extends AbstractDashboardController
 {
     #[Route('/admin', name: 'admin')]
     public function index(): Response
-    {
-        // Option 1. You can make your dashboard redirect to some common page of your backend
-        
+    {        
          $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
          return $this->redirect($adminUrlGenerator->setController(CarCrudController::class)->generateUrl());
     }
@@ -39,7 +36,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToUrl('Accueil du site', 'fa fa-home', '/');
 
         if ($this->isGranted('ROLE_ADMIN')) {
-        yield MenuItem::linkToCrud('Page d\'accueil', 'fa fa-list', HomeContent::class);
+        yield MenuItem::linkToCrud('Page d\'accueil', 'fa fa-list', HomeContent::class)->setPermission('ROLE_ADMIN');
         yield MenuItem::linkToCrud('Horaires', 'fas fa-list', OpeningHours::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
         }
