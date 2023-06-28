@@ -2,17 +2,31 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\HomeContent;
+use App\Entity\Review;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function index(): Response
+    public function index(ManagerRegistry $doctrine): Response
     {
+        $repository = $doctrine->getRepository(HomeContent::class);
+        $content = $repository->findAll();
+
+        $reviewRepository = $doctrine->getRepository(Review::class);
+        $reviews = $reviewRepository->findBy(
+            ['approved' => true],
+            null,  
+            10                   
+        );
+
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
+            "content" => $content,
+            "reviews" => $reviews
         ]);
     }
 }

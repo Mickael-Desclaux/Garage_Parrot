@@ -2,12 +2,13 @@
 
 namespace App\Controller\Admin;
 
-use App\Controller\Admin\CarCrudController;
 use App\Entity\Car;
-use App\Entity\CarImage;
-use App\Entity\Contact;
-use App\Entity\Review;
 use App\Entity\User;
+use App\Entity\Review;
+use App\Entity\Contact;
+use App\Entity\CarImage;
+use App\Entity\HomeContent;
+use App\Controller\Admin\CarCrudController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -35,6 +36,7 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToUrl('Accueil du site', 'fa fa-home', '/');
+        yield MenuItem::linkToCrud('Page d\'accueil', 'fa fa-list', HomeContent::class);
         yield MenuItem::linkToCrud('Voitures', 'fas fa-list', Car::class);
         yield MenuItem::linkToCrud('Images', 'fas fa-image', CarImage::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
