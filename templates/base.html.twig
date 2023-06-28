@@ -51,29 +51,28 @@
 									</li>
 								{% endif %}
 
-									{% if app.user %}
-										<li class="nav-item">
-											<a class="nav-link ms-5 me-5 fs-5 navConnection" href="/déconnexion">
-												Déconnexion
-											</a>
-										</li>
-									{% else %}
-										<li class="nav-item">
-											<a class="nav-link ms-5 me-5 fs-5 navConnection" href="/connexion">
-												Connexion
-											</a>
-										</li>
-									{% endif %}
-								</ul>
-							</div>
+								{% if app.user %}
+									<li class="nav-item">
+										<a class="nav-link ms-5 me-5 fs-5 navConnection" href="/déconnexion">
+											Déconnexion
+										</a>
+									</li>
+								{% else %}
+									<li class="nav-item">
+										<a class="nav-link ms-5 me-5 fs-5 navConnection" href="/connexion">
+											Connexion
+										</a>
+									</li>
+								{% endif %}
+							</ul>
 						</div>
 					</div>
-				</nav>
-			{% endblock %}
-			<div class="container"> {% block body %}{% endblock %}
 				</div>
-				{% block footer %}
-				</body>
+			</nav>
+		{% endblock %}
+		<div class="container"> {% block body %}{% endblock %}
+			</div>
+			{% block footer %}
 				<footer>
 					<div class="container-fluid pt-3 pb-3 d-flex justify-content-center">
 						<table>
@@ -85,46 +84,20 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>Lundi :</td>
-									<td>08:45 - 12:00, 14:00 - 18:00</td>
-								</tr>
-								<tr>
-									<td>Mardi :</td>
-									<td>08:45 - 12:00, 14:00 - 18:00</td>
-								</tr>
-								<tr>
-									<td>Mercredi :</td>
-									<td>08:45 - 12:00, 14:00 - 18:00</td>
-								</tr>
-								<tr>
-									<td>Jeudi :</td>
-									<td>08:45 - 12:00, 14:00 - 18:00</td>
-								</tr>
-								<tr>
-									<td>Vendredi :</td>
-									<td>08:45 - 12:00, 14:00 - 18:00</td>
-								</tr>
-								<tr>
-									<td>Samedi :</td>
-									<td>08:45 - 12:00</td>
-								</tr>
-								<tr>
-									<td>Dimanche :</td>
-									<td>Fermé</td>
-								</tr>
+							{% set opening = get_opening_hours() %}
+							{% set sortedOpening = opening|sort_days %}
+								{% for OpeningHours in sortedOpening %}
+									<tr>
+										<td>{{OpeningHours.day}}</td>
+										<td>{{OpeningHours.hours}}</td>
+									</tr>
+								{% endfor %}
 							</tbody>
+
 						</table>
 					</div>
 				</footer>
 			{% endblock %}
 		</body>
 	</html>
-	{#<li>lundi : 08:45 - 12:00, 14:00 - 18:00</li>
-			<li>mardi : 08:45 - 12:00, 14:00 - 18:00</li>
-			<li>mercredi : 08:45 - 12:00, 14:00 - 18:00</li>
-			<li>jeudi : 08:45 - 12:00, 14:00 - 18:00</li>
-			<li>vendredi : 08:45 - 12:00, 14:00 - 18:00</li>
-			<li>samedi : 08:45 - 12:00</li>
-			<li>dimanche : Fermé</li>#}
 

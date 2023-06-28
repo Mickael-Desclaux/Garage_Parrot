@@ -39,13 +39,7 @@ footer {
     color: #D9777F;
 }
 
-/* Modification de la couleur de fond du carrousel */
-.carousel-inner {
-    background-color: #262526; /* Remplacez #abcdef par la couleur de votre choix */
+h1 {
+    color: #D92332;
 }
 
-/* Modification de la couleur des flèches du carrousel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #D92332; /* Remplacez #123456 par la couleur de votre choix */
-}

@@ -9,6 +9,7 @@ use App\Entity\Contact;
 use App\Entity\CarImage;
 use App\Entity\HomeContent;
 use App\Controller\Admin\CarCrudController;
+use App\Entity\OpeningHours;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -36,10 +37,14 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToUrl('Accueil du site', 'fa fa-home', '/');
+
+        if ($this->isGranted('ROLE_ADMIN')) {
         yield MenuItem::linkToCrud('Page d\'accueil', 'fa fa-list', HomeContent::class);
-        yield MenuItem::linkToCrud('Voitures', 'fas fa-list', Car::class);
-        yield MenuItem::linkToCrud('Images', 'fas fa-image', CarImage::class);
+        yield MenuItem::linkToCrud('Horaires', 'fas fa-list', OpeningHours::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
+        }
+        
+        yield MenuItem::linkToCrud('Voitures', 'fas fa-list', Car::class);
         yield MenuItem::linkToCrud('Avis Clients', 'fas fa-star', Review::class);
         yield MenuItem::linkToCrud('Contacts', 'fas fa-list', Contact::class);
     }

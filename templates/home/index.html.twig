@@ -9,6 +9,10 @@
 					<section class="content">
 
 						<p>{{HomeContent.content|raw}}</p>
+						{% if HomeContent.image %}
+						<img src="{{ '/images/home/' ~ HomeContent.image }}" alt="HomeContent.image">
+						{% endif %}
+						
 
 					</section>
 				{% endfor %}
