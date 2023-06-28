@@ -56,7 +56,6 @@ class UserCrudController extends AbstractCrudController implements EventSubscrib
     public function configureActions(Actions $actions): Actions
     {
         return $actions
-            ->disable(Action::NEW, Action::EDIT)
             ->add(Crud::PAGE_INDEX, Action::DETAIL);
     }
 
