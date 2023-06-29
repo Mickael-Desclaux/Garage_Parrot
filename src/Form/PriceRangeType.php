@@ -13,12 +13,14 @@ class PriceRangeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('min', IntegerType::class, [
-                'placeholder' => "Min."
+            ->add('price_min', IntegerType::class, [
+                'attr' => ['placeholder' => 'Min.'],
+                'label' => false
             ])
 
-            ->add('max', IntegerType::class, [
-                'placeholder' => "Max."
+            ->add('price_max', IntegerType::class, [
+                'attr' => ['placeholder' => 'Max.'],
+                'label' => false
             ])
         ;
     }

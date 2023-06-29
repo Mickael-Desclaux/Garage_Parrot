@@ -44,17 +44,79 @@ class CarRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('c')
             ->orderBy('c.id', 'ASC')
-            ->getQuery()
-        ;
+            ->getQuery();
     }
 
-//    public function findOneBySomeField($value): ?Car
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+    public function findCarsByFilter($filter)
+    {
+        $queryBuilder = $this->createQueryBuilder('car');
+
+
+
+        if (!empty($filter["car_filter"]["price"]['price_min'])) {
+            $queryBuilder
+                ->andWhere('car.price >= :price_min')
+                ->setParameter('price_min', $filter["car_filter"]["price"]['price_min']);
+        }
+
+        if (!empty($filter["car_filter"]["price"]['price_max'])) {
+            $queryBuilder
+                ->andWhere('car.price <= :price_max')
+                ->setParameter('price_max', $filter["car_filter"]["price"]['price_max']);
+        }
+
+        if (!empty($filter["car_filter"]['brand'])) {
+            $brand = preg_replace('/[^a-zA-Z0-9\s]/', '', $filter["car_filter"]['brand']);
+            $brand = str_replace(' ', '-', $brand);
+            $queryBuilder
+                ->andWhere('car.brand LIKE :brand')
+                ->setParameter('brand', '%' . $brand . '%');
+        }
+        
+
+        if (!empty($filter["car_filter"]["year"]['year_min']) && is_numeric($filter["car_filter"]["year"]['year_min'])) {
+            $queryBuilder
+                ->andWhere('car.year >= :year_min')
+                ->setParameter('year_min', $filter["car_filter"]["year"]['year_min']);
+        }
+
+        if (!empty($filter["car_filter"]["year"]['year_max']) && is_numeric($filter["car_filter"]["year"]['year_max'])) {
+            $queryBuilder
+                ->andWhere('car.year <= :year_max')
+                ->setParameter('year_max', $filter["car_filter"]["year"]['year_max']);
+        }
+
+        if (!empty($filter["car_filter"]["horsepower"]['horsepower_min']) && is_numeric($filter["car_filter"]["horsepower"]['horsepower_min'])) {
+            $queryBuilder
+                ->andWhere('car.horsepower >= :horsepower_min')
+                ->setParameter('horsepower_min', $filter["car_filter"]["horsepower"]['horsepower_min']);
+        }
+
+        if (!empty($filter["car_filter"]["horsepower"]['horsepower_max']) && is_numeric($filter["car_filter"]["horsepower"]['horsepower_max'])) {
+            $queryBuilder
+                ->andWhere('car.horsepower <= :horsepower_max')
+                ->setParameter('horsepower_max', $filter["car_filter"]["horsepower"]['horsepower_max']);
+        }
+
+        if (!empty($filter["car_filter"]['energy'])) {
+            $queryBuilder
+                ->andWhere('car.energy = :energy')
+                ->setParameter('energy', $filter["car_filter"]['energy']);
+        }
+        
+
+        if (!empty($filter["car_filter"]['gearbox'])) {
+            $queryBuilder
+                ->andWhere('car.gearbox = :gearbox')
+                ->setParameter('gearbox', $filter["car_filter"]['gearbox']);
+        }
+
+        if (!empty($filter["car_filter"]['doors'])) {
+            $queryBuilder
+                ->andWhere('car.doors = :doors')
+                ->setParameter('doors', $filter["car_filter"]['doors']);
+        }
+        
+        return $queryBuilder->getQuery();
+    }
 }

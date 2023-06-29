@@ -5,29 +5,84 @@
 
 {% block body %}
 
-	<div class="d-flex justify-content-around flex-wrap container mt-5">
-		{% for car in pagination %}
-			<div class="card m-5" style="width: 20rem;">
-				{% for image in car.carImages %}
-					{% if image.name %}
-						<img src="{{ asset('images/cars/' ~ image.name) }}" alt="{{ car.brand }} {{ car.model }}" style="max-width: 10rem;">
-					{% endif %}
-				{% endfor %}
 
-				<div class="card-body">
+	<div class="container-fluid car-list-container">
+		<div class="row">
+			<div class="col mt-5 pt-5">
+				{{ form_start(filter_form, { 'attr': {'id': 'car_filter', 'action': path('filtered_cars')}}) }}
 
-					{% if car.brand %}
-						<h5 class="card-title text-center">{{car.brand ~ " " ~ car.model}}</h5>
-					{% endif %}
-					<p class="card-text text-center">{{car.year}}</p>
-					<p class="card-text text-center">{{car.price ~ "€"}}</p>
-					<a href="{{path('voiture_detail', {id: car.id}) }}" class="btn btn-danger stretched-link d-flex justify-content-center">Détails</a>
+				<div class="form-group">
+					{{ form_label(filter_form.price, 'Prix') }}
+					{{ form_widget(filter_form.price, { 'attr': {'class': 'form-control'} }) }}
 				</div>
+
+				<div class="form-group">
+					{{ form_label(filter_form.brand, 'Marque') }}
+					{{ form_widget(filter_form.brand, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+
+				<div class="form-group">
+					{{ form_label(filter_form.year, 'Année') }}
+					{{ form_widget(filter_form.year, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+
+				<div class="form-group">
+					{{ form_label(filter_form.mileage, 'Kilométrage') }}
+					{{ form_widget(filter_form.mileage, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+
+				<div class="form-group">
+					{{ form_label(filter_form.horsepower, 'Puissance') }}
+					{{ form_widget(filter_form.horsepower, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+
+				<div class="form-group">
+					{{ form_label(filter_form.energy, 'Énergie') }}
+					{{ form_widget(filter_form.energy, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+
+				<div class="form-group">
+					{{ form_label(filter_form.gearbox, 'Boîte de vitesse') }}
+					{{ form_widget(filter_form.gearbox, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+
+				<div class="form-group">
+					{{ form_label(filter_form.doors, 'Nombre de portes') }}
+					{{ form_widget(filter_form.doors, { 'attr': {'class': 'form-control'} }) }}
+				</div>
+				
+				<div>{{ form_widget(filter_form.submit, { 'attr': {'class': 'btn btn-danger'} }) }}</div>
+
+				{{ form_end(filter_form) }}
 			</div>
-		{% endfor %}
-	</div>
-	<div class="container d-flex justify-content-center">
-	{{ knp_pagination_render(pagination) }}
-	</div>
-{% endblock %}
+			<div class="car-list d-flex justify-content-around flex-wrap container mt-5" id="car-list">
+				{% for car in pagination %}
+					<div class="card m-5 car" style="width: 25rem;">
+						{% for image in car.carImages %}
+							{% if image.name %}
+								<img src="{{ asset('images/cars/' ~ image.name) }}" alt="{{ car.brand }} {{ car.model }}" style="max-width: 10rem;">
+							{% endif %}
+						{% endfor %}
+
+						<div class="card-body">
+
+							{% if car.brand %}
+								<h3 class="card-title text-center">{{car.brand ~ " " ~ car.model}}</h3>
+							{% endif %}
+							<p class="card-text text-center">{{car.year}}</p>
+							<p class="card-text text-center">{{car.price ~ "€"}}</p>
+							<div class="d-flex justify-content-center">
+								<a href="{{path('voiture_detail', {id: car.id}) }}" class="btn btn-danger stretched-link d-flex justify-content-center" id="car-detail-btn">Détails</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="row">
+				<div class="container d-flex justify-content-center">{{ knp_pagination_render(pagination) }}</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+		<script src="{{ asset('js/form.js') }}"></script>
+	{% endblock %}
 
