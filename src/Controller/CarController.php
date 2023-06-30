@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Car;
-use App\Entity\CarImage;
 use App\Entity\Contact;
 use App\Form\ContactType;
 use App\Form\CarFilterType;
@@ -34,7 +33,7 @@ class CarController extends AbstractController
         $pagination = $paginator->paginate(
             $queryBuilder,
             $request->query->get('page', 1),
-            9
+            4
         );
         
 
@@ -45,15 +44,20 @@ class CarController extends AbstractController
     }
 
     #[Route('/filtered_cars', name: 'filtered_cars')]
-    public function filteredCars(Request $request, CarRepository $carRepository): JsonResponse
+    public function filteredCars(Request $request, CarRepository $carRepository, PaginatorInterface $paginator): JsonResponse
     {
         $filter = $request->request->all();
-        $cars = $carRepository->findCarsByFilter($filter)->getResult();
-        // dump($filter);
-        // dump(!empty($filter['brand']));
-        // dump($filter['brand']);
+        $queryBuilder = $carRepository->findCarsByFilter($filter);
+
+        $currentPage = $request->query->getInt('page', 1);
+        $pagination = $paginator->paginate(
+            $queryBuilder,
+            $currentPage,
+            4
+        );
+
         $carData = [];
-        foreach ($cars as $car) {
+        foreach ($pagination as $car) {
 
             $images = $car->getCarImages();
             $firstImage = null;
@@ -77,7 +81,11 @@ class CarController extends AbstractController
             dump($carData);
         }
 
-        return new JsonResponse($carData);
+        return new JsonResponse([
+            'car' => $carData,
+            'currentPage' => $currentPage,
+            'totalPages' => ceil($pagination->getTotalItemCount() / 4),
+        ]);
     }
 
     #[Route('/nos_voitures/{id}', name: "voiture_detail")]
