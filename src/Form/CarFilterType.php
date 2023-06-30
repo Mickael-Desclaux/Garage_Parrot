@@ -3,10 +3,7 @@
 namespace App\Form;
 
 use App\DTO\CarFilterDTO;
-use App\DTO\HorsepowerDTO;
-use App\DTO\MileageDTO;
-use App\DTO\PriceDTO;
-use App\DTO\YearDTO;
+use App\Entity\Car;
 use App\Form\YearRangeType;
 use App\Form\PriceRangeType;
 use App\Form\MileageRangeType;
@@ -26,7 +23,6 @@ class CarFilterType extends AbstractType
 
             ->add('price', PriceRangeType::class, [
                 'label' => 'Prix',
-                'data_class' => PriceDTO::class,
                 'required' => false
             ])
 
@@ -37,19 +33,16 @@ class CarFilterType extends AbstractType
 
             ->add('year', YearRangeType::class, [
                 'label' => 'Année',
-                'data_class' => YearDTO::class,
                 'required' => false
             ])
 
             ->add('mileage', MileageRangeType::class, [
                 'label' => 'Kilométrage',
-                'data_class' => MileageDTO::class,
                 'required' => false
             ])
 
             ->add('horsepower', HorsepowerRangeType::class, [
                 'label' => 'Puissance',
-                'data_class' => HorsepowerDTO::class,
                 'required' => false
             ])
 
@@ -95,7 +88,7 @@ class CarFilterType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => CarFilterDTO::class,
+            'data_class' => Car::class,
             'method' => 'POST'
         ]);
     }

@@ -1,8 +1,8 @@
-function loadPage(page) {
-  var formData = $('#car_filter').serialize(); // Sérialise les données du formulaire
+function loadPage() {
+  var formData = $('#car_filter').serialize();
 
   $.ajax({
-    url: '/nos_voitures?page=' + page, // Ajoute le numéro de page à l'URL
+    url: '/filtered_cars',
     method: 'POST',
     data: formData,
     dataType: 'json',
@@ -26,16 +26,7 @@ function loadPage(page) {
         carList.append(html); // Ajoute le HTML de la voiture à la liste des voitures
       });
 
-      var pagination = $('#pagination');
-      pagination.empty();
-      for (var i = 1; i <= response.totalPages; i++) {
-        var link = $('<a></a>')
-          .text(i)
-          .attr('href', '#')
-          .addClass(i == response.currentPage ? 'active' : '')
-          .on('click', createPageLoader(i));
-        pagination.append(link);
-      }
+
     },
     error: function (xhr, status, error) {
       console.error("Erreur AJAX : " + status + " - " + error);
@@ -43,17 +34,9 @@ function loadPage(page) {
   });
 }
 
-function createPageLoader(page) {
-  return function (e) {
-    e.preventDefault();
-    loadPage(page);
-  };
-}
-
-
 $(document).ready(function () {
   $('#car_filter').on('submit', function (e) {
     e.preventDefault();
-    loadPage(1);  // Charge la première page lors de la soumission du formulaire
+    loadPage();
   });
-});
+})

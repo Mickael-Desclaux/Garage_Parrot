@@ -4,7 +4,7 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-carList:
-    path: /nos_voitures
-    controller: App\Controller\CarController::car_list
+filtered_cars:
+    path: /filtered_cars
+    controller: App\Controller\CarController::filteredCars
     methods: [POST]

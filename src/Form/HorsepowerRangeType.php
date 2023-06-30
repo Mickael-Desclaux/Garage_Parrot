@@ -2,7 +2,6 @@
 
 namespace App\Form;
 
-use App\DTO\HorsepowerDTO;
 use App\Entity\Car;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -29,7 +28,7 @@ class HorsepowerRangeType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => HorsepowerDTO::class
+            'data_class' => Car::class,
         ]);
     }
 }

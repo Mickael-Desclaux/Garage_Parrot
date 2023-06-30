@@ -9,7 +9,7 @@
 	<div class="container-fluid car-list-container">
 		<div class="row">
 			<div class="col mt-5 pt-5">
-				{{ form_start(filter_form, { 'attr': {'id': 'car_filter', 'action': path('car_list')}}) }}
+				{{ form_start(filter_form, { 'attr': {'id': 'car_filter', 'action': path('filtered_cars')}}) }}
 
 				<div class="form-group">
 					{{ form_label(filter_form.price, 'Prix') }}
@@ -50,13 +50,13 @@
 					{{ form_label(filter_form.doors, 'Nombre de portes') }}
 					{{ form_widget(filter_form.doors, { 'attr': {'class': 'form-control'} }) }}
 				</div>
-				
+
 				<div>{{ form_widget(filter_form.submit, { 'attr': {'class': 'btn btn-danger'} }) }}</div>
 
 				{{ form_end(filter_form) }}
 			</div>
 			<div class="car-list d-flex justify-content-around flex-wrap container mt-5" id="car-list">
-				{% for car in pagination %}
+				{% for car in cars %}
 					<div class="card m-5 car" style="width: 25rem;">
 						{% for image in car.carImages %}
 							{% if image.name %}
@@ -77,9 +77,6 @@
 						</div>
 					</div>
 				{% endfor %}
-			</div>
-			<div class="row">
-				<div class="container d-flex justify-content-center">{{ knp_pagination_render(pagination) }}</div>
 			</div>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
