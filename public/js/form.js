@@ -2,7 +2,7 @@ function loadPage(page) {
   var formData = $('#car_filter').serialize(); // Sérialise les données du formulaire
 
   $.ajax({
-    url: '/filtered_cars?page=' + page, // Ajoute le numéro de page à l'URL
+    url: '/nos_voitures?page=' + page, // Ajoute le numéro de page à l'URL
     method: 'POST',
     data: formData,
     dataType: 'json',
@@ -36,7 +36,6 @@ function loadPage(page) {
           .on('click', createPageLoader(i));
         pagination.append(link);
       }
-      console.log(response);
     },
     error: function (xhr, status, error) {
       console.error("Erreur AJAX : " + status + " - " + error);

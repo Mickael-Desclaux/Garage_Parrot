@@ -51,72 +51,90 @@ class CarRepository extends ServiceEntityRepository
     {
         $queryBuilder = $this->createQueryBuilder('car');
 
+        if ($filter->getPrice() !== null) {
+            if (!empty($filter->getPrice()->getPriceMin())) {
+                $queryBuilder
+                    ->andWhere('car.price >= :price_min')
+                    ->setParameter('price_min', $filter->getPrice()->getPriceMin());
+            }
 
-
-        if (!empty($filter["car_filter"]["price"]['price_min'])) {
-            $queryBuilder
-                ->andWhere('car.price >= :price_min')
-                ->setParameter('price_min', $filter["car_filter"]["price"]['price_min']);
+            if (!empty($filter->getPrice()->getPriceMax())) {
+                $queryBuilder
+                    ->andWhere('car.price <= :price_max')
+                    ->setParameter('price_max', $filter->getPrice()->getPriceMax());
+            }
         }
 
-        if (!empty($filter["car_filter"]["price"]['price_max'])) {
-            $queryBuilder
-                ->andWhere('car.price <= :price_max')
-                ->setParameter('price_max', $filter["car_filter"]["price"]['price_max']);
-        }
-
-        if (!empty($filter["car_filter"]['brand'])) {
-            $brand = preg_replace('/[^a-zA-Z0-9\s]/', '', $filter["car_filter"]['brand']);
+        if (!empty($filter->getBrand())) {
+            $brand = preg_replace('/[^a-zA-Z0-9\s]/', '', $filter->getBrand());
             $brand = str_replace(' ', '-', $brand);
             $queryBuilder
                 ->andWhere('car.brand LIKE :brand')
                 ->setParameter('brand', '%' . $brand . '%');
         }
-        
 
-        if (!empty($filter["car_filter"]["year"]['year_min']) && is_numeric($filter["car_filter"]["year"]['year_min'])) {
-            $queryBuilder
-                ->andWhere('car.year >= :year_min')
-                ->setParameter('year_min', $filter["car_filter"]["year"]['year_min']);
+        if ($filter->getYear() !== null) {
+            if (!empty($filter->getYear()->getYearMin()) && is_numeric($filter->getYear()->getYearMin())) {
+                $queryBuilder
+                    ->andWhere('car.year >= :year_min')
+                    ->setParameter('year_min', $filter->getYear()->getYearMin());
+            }
+
+            if (!empty($filter->getYear()->getYearMax()) && is_numeric($filter->getYear()->getYearMax())) {
+                $queryBuilder
+                    ->andWhere('car.year <= :year_max')
+                    ->setParameter('year_max', $filter->getYear()->getYearMax());
+            }
         }
 
-        if (!empty($filter["car_filter"]["year"]['year_max']) && is_numeric($filter["car_filter"]["year"]['year_max'])) {
-            $queryBuilder
-                ->andWhere('car.year <= :year_max')
-                ->setParameter('year_max', $filter["car_filter"]["year"]['year_max']);
+        if ($filter->getMileage() !== null) {
+            if (!empty($filter->getMileage()->getMileageMin()) && is_numeric($filter->getMileage()->getMileageMin())) {
+                $queryBuilder
+                    ->andWhere('car.year <= :year_max')
+                    ->setParameter('year_max', $filter->getMileage()->getMileageMin());
+            }
+
+            if (!empty($filter->getMileage()->getMileageMax()) && is_numeric($filter->getMileage()->getMileageMax())) {
+                $queryBuilder
+                    ->andWhere('car.year >= :year_min')
+                    ->setParameter('year_min', $filter->getMileage()->getMileageMax());
+            }
         }
 
-        if (!empty($filter["car_filter"]["horsepower"]['horsepower_min']) && is_numeric($filter["car_filter"]["horsepower"]['horsepower_min'])) {
-            $queryBuilder
-                ->andWhere('car.horsepower >= :horsepower_min')
-                ->setParameter('horsepower_min', $filter["car_filter"]["horsepower"]['horsepower_min']);
+        if ($filter->getHorsepower() !== null) {
+            if (!empty($filter->getHorsepower()->getHorsepowerMin()) && is_numeric($filter->getHorsepower()->getHorsepowerMin())) {
+                $queryBuilder
+                    ->andWhere('car.horsepower >= :horsepower_min')
+                    ->setParameter('horsepower_min', $filter->getHorsepower()->getHorsepowerMin());
+            }
+
+            if (!empty($filter->getHorsepower()->getHorsepowerMax()) && is_numeric($filter->getHorsepower()->getHorsepowerMax())) {
+                $queryBuilder
+                    ->andWhere('car.horsepower <= :horsepower_max')
+                    ->setParameter('horsepower_max', $filter->getHorsepower()->getHorsepowerMax());
+            }
         }
 
-        if (!empty($filter["car_filter"]["horsepower"]['horsepower_max']) && is_numeric($filter["car_filter"]["horsepower"]['horsepower_max'])) {
-            $queryBuilder
-                ->andWhere('car.horsepower <= :horsepower_max')
-                ->setParameter('horsepower_max', $filter["car_filter"]["horsepower"]['horsepower_max']);
-        }
-
-        if (!empty($filter["car_filter"]['energy'])) {
+        if (!empty($filter->getEnergy())) {
             $queryBuilder
                 ->andWhere('car.energy = :energy')
-                ->setParameter('energy', $filter["car_filter"]['energy']);
+                ->setParameter('energy', $filter->getEnergy());
         }
-        
 
-        if (!empty($filter["car_filter"]['gearbox'])) {
+
+        if (!empty($filter->getGearbox())) {
             $queryBuilder
                 ->andWhere('car.gearbox = :gearbox')
-                ->setParameter('gearbox', $filter["car_filter"]['gearbox']);
+                ->setParameter('gearbox', $filter->getGearbox());
         }
 
-        if (!empty($filter["car_filter"]['doors'])) {
+        if (!empty($filter->getDoors())) {
             $queryBuilder
                 ->andWhere('car.doors = :doors')
-                ->setParameter('doors', $filter["car_filter"]['doors']);
+                ->setParameter('doors', $filter->getDoors());
         }
-        
+
+        dump($queryBuilder->getQuery()->getSQL());
         return $queryBuilder->getQuery();
     }
 }

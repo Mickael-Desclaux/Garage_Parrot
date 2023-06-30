@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\DTO\CarFilterDTO;
 use App\Entity\Car;
 use App\Entity\Contact;
 use App\Form\ContactType;
@@ -18,52 +19,30 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class CarController extends AbstractController
 {
     #[Route('/nos_voitures', name: 'car_list')]
-    public function carList(CarRepository $carRepository, Request $request, PaginatorInterface $paginator): Response
-    {
-        $form = $this->createForm(CarFilterType::class);
-        $form->handleRequest($request);
+public function carList(Request $request, CarRepository $carRepository, PaginatorInterface $paginator): Response
+{
+    $carFilterDTO = new CarFilterDTO();
+    $form = $this->createForm(CarFilterType::class, $carFilterDTO);
+    $form->handleRequest($request);
 
-        $queryBuilder = $carRepository->paginationQuery();
+    dump($carFilterDTO);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $filter = $form->getData();
-            $queryBuilder = $carRepository->findCarsByFilter($filter);
-        }
+    $carFilterDTO = $form->isSubmitted() && $form->isValid() ? $form->getData() : new CarFilterDTO();
+    $queryBuilder = $carRepository->findCarsByFilter($carFilterDTO);
 
-        $pagination = $paginator->paginate(
-            $queryBuilder,
-            $request->query->get('page', 1),
-            4
-        );
-        
+    $currentPage = $request->query->getInt('page', 1);
+    $pagination = $paginator->paginate(
+        $queryBuilder,
+        $currentPage,
+        10
+    );
 
-        return $this->render('car/list.html.twig', [
-            "pagination" => $pagination,
-            'filter_form' => $form->createView(),
-        ]);
-    }
-
-    #[Route('/filtered_cars', name: 'filtered_cars')]
-    public function filteredCars(Request $request, CarRepository $carRepository, PaginatorInterface $paginator): JsonResponse
-    {
-        $filter = $request->request->all();
-        $queryBuilder = $carRepository->findCarsByFilter($filter);
-
-        $currentPage = $request->query->getInt('page', 1);
-        $pagination = $paginator->paginate(
-            $queryBuilder,
-            $currentPage,
-            4
-        );
-
+    // Check if the request is an AJAX request
+    if ($request->isXmlHttpRequest()) {
         $carData = [];
         foreach ($pagination as $car) {
-
             $images = $car->getCarImages();
-            $firstImage = null;
-            if (count($images) > 0) {
-                $firstImage = $images[0]->getName();
-            }
+            $firstImage = count($images) > 0 ? $images[0]->getName() : null;
 
             $carData[] = [
                 'price' => $car->getPrice(),
@@ -84,9 +63,88 @@ class CarController extends AbstractController
         return new JsonResponse([
             'car' => $carData,
             'currentPage' => $currentPage,
-            'totalPages' => ceil($pagination->getTotalItemCount() / 4),
+            'totalPages' => ceil($pagination->getTotalItemCount() / 10),
+        ]);
+        dump($carData);
+    } else {
+        return $this->render('car/list.html.twig', [
+            "pagination" => $pagination,
+            'filter_form' => $form->createView(),
         ]);
     }
+}
+
+
+    // #[Route('/nos_voitures', name: 'car_list')]
+    // public function carList(CarRepository $carRepository, Request $request, PaginatorInterface $paginator): Response
+    // {
+    //     $form = $this->createForm(CarFilterType::class);
+    //     $form->handleRequest($request);
+
+    //     $queryBuilder = $carRepository->paginationQuery();
+
+    //     if ($form->isSubmitted() && $form->isValid()) {
+    //         $filter = $form->getData();
+    //         $queryBuilder = $carRepository->findCarsByFilter($filter);
+    //     }
+
+    //     $pagination = $paginator->paginate(
+    //         $queryBuilder,
+    //         $request->query->get('page', 1),
+    //         4
+    //     );
+        
+
+    //     return $this->render('car/list.html.twig', [
+    //         "pagination" => $pagination,
+    //         'filter_form' => $form->createView(),
+    //     ]);
+    // }
+
+    // #[Route('/filtered_cars', name: 'filtered_cars')]
+    // public function filteredCars(Request $request, CarRepository $carRepository, PaginatorInterface $paginator): JsonResponse
+    // {
+    //     $filter = $request->request->all();
+    //     $queryBuilder = $carRepository->findCarsByFilter($filter);
+
+    //     $currentPage = $request->query->getInt('page', 1);
+    //     $pagination = $paginator->paginate(
+    //         $queryBuilder,
+    //         $currentPage,
+    //         4
+    //     );
+
+    //     $carData = [];
+    //     foreach ($pagination as $car) {
+
+    //         $images = $car->getCarImages();
+    //         $firstImage = null;
+    //         if (count($images) > 0) {
+    //             $firstImage = $images[0]->getName();
+    //         }
+
+    //         $carData[] = [
+    //             'price' => $car->getPrice(),
+    //             'model' => $car->getModel(),
+    //             'brand' => $car->getBrand(),
+    //             'year' => $car->getYear(),
+    //             'mileage' => $car->getMileage(),
+    //             'horsepower' => $car->getHorsepower(),
+    //             'energy' => $car->getEnergy(),
+    //             'gearbox' => $car->getGearbox(),
+    //             'doors' => $car->getDoors(),
+    //             'image' => $firstImage,
+    //             'detailLink' => $this->generateUrl('voiture_detail', ['id' => $car->getId()]),
+    //         ];
+    //         dump($carData);
+    //     }
+
+    //     return new JsonResponse([
+    //         'car' => $carData,
+    //         'currentPage' => $currentPage,
+    //         'totalPages' => ceil($pagination->getTotalItemCount() / 4),
+    //     ]);
+    // }
 
     #[Route('/nos_voitures/{id}', name: "voiture_detail")]
     public function showDetails(Request $request, ManagerRegistry $doctrine, Car $car)

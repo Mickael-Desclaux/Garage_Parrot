@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Car;
+use App\DTO\PriceDTO;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -28,7 +28,7 @@ class PriceRangeType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Car::class,
+            'data_class' => PriceDTO::class
         ]);
     }
 }
