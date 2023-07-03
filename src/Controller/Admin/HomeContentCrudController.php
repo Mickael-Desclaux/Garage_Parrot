@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 
 class HomeContentCrudController extends AbstractCrudController
 {   
@@ -23,6 +24,7 @@ class HomeContentCrudController extends AbstractCrudController
         yield ImageField::new('image')
         ->setLabel('Image')
         ->setUploadDir('public/images/home');
+        yield IntegerField::new('displayOrder')->setLabel('Ordre d\'affichage');
     }
     
     public function configureActions(Actions $actions): Actions

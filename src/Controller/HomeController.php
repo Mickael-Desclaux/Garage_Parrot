@@ -15,7 +15,7 @@ class HomeController extends AbstractController
     public function index(ManagerRegistry $doctrine): Response
     {
         $repository = $doctrine->getRepository(HomeContent::class);
-        $content = $repository->findAll();
+        $content = $repository->findBy([], ['displayOrder' => 'ASC']);
 
         $reviewRepository = $doctrine->getRepository(Review::class);
         $reviews = $reviewRepository->findBy(
