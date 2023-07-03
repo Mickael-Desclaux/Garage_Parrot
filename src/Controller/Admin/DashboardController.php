@@ -8,6 +8,7 @@ use App\Entity\Review;
 use App\Entity\Contact;
 use App\Entity\HomeContent;
 use App\Controller\Admin\CarCrudController;
+use App\Entity\HomeServices;
 use App\Entity\OpeningHours;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -37,6 +38,7 @@ class DashboardController extends AbstractDashboardController
 
         if ($this->isGranted('ROLE_ADMIN')) {
         yield MenuItem::linkToCrud('Page d\'accueil', 'fa fa-list', HomeContent::class)->setPermission('ROLE_ADMIN');
+        yield MenuItem::linkToCrud('Prestations', 'fas fa-list', HomeServices::class);
         yield MenuItem::linkToCrud('Horaires', 'fas fa-list', OpeningHours::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
         }

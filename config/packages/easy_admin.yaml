@@ -3,6 +3,9 @@ easy_admin:
         HomeContent:
             class: App\Entity\HomeContent
             role: ROLE_ADMIN
+        HomeServices:
+            class: App\Entity\HomeServices
+            role: ROLE_ADMIN
         OpeningHours:
             class: App\Entity\OpeningHours
             role: ROLE_ADMIN

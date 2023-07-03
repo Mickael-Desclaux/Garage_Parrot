@@ -2,36 +2,41 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\HomeContent;
+use App\Entity\HomeServices;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 
-class HomeContentCrudController extends AbstractCrudController
-{   
+class HomeServicesCrudController extends AbstractCrudController
+{
     public static function getEntityFqcn(): string
     {
-        return HomeContent::class;
+        return HomeServices::class;
     }
-    
+
     public function configureFields(string $pageName): iterable
     {
-        yield TextEditorField::new('content')->setLabel('Section de texte');
+        yield TextField::new('title')->setLabel('Titre');
+        yield TextareaField::new('content')->setLabel('Description');
+        yield NumberField::new('price')
+        ->setLabel('Prix')
+        ->setNumDecimals('2');
         yield ImageField::new('image')
-        ->setLabel('Image')
-        ->setUploadDir('public/images/home/content');
-        yield IntegerField::new('displayOrder')->setLabel('Ordre d\'affichage');
+        ->setUploadDir('public/images/home/services')
+        ->setLabel('Image');
     }
-    
+
     public function configureActions(Actions $actions): Actions
     {
         return $actions
             ->add(Crud::PAGE_INDEX, Action::DETAIL);
     }
+
 
     public function configureCrud(Crud $crud): Crud
     {
