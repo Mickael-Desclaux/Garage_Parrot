@@ -43,8 +43,8 @@ h1 {
     color: #D92332;
 }
 
-form {
-    width: 15rem;
+.form-group {
+    width: 13.5rem;
 }
 
 #car-detail-btn {
@@ -58,6 +58,26 @@ form {
 .form-control {
     background-color: #f2f2f2;
 }
+
+#myBtn {
+    display: none;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #D92332; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #262526; /* Add a dark-grey background on hover */
+  }
 
 @media (min-width: 992px) {
 

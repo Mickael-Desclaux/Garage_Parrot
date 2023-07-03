@@ -123,4 +123,12 @@ class CarRepository extends ServiceEntityRepository
         
         return $queryBuilder->getQuery()->getResult();
     }
+
+    public function totalCarCount()
+    {
+        return $this->createQueryBuilder('a')
+        ->select('count(a.id)')
+        ->getQuery()
+        ->getSingleScalarResult();
+    }
 }

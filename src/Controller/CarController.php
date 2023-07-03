@@ -22,6 +22,8 @@ class CarController extends AbstractController
         $form = $this->createForm(CarFilterType::class);
         $form->handleRequest($request);
 
+        $totalCars = $carRepository->totalCarCount();
+
         $cars = $carRepository->findAll();
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -32,6 +34,7 @@ class CarController extends AbstractController
         return $this->render('car/list.html.twig', [
             "cars" => $cars,
             'filter_form' => $form->createView(),
+            'total_cars' => $totalCars,
         ]);
     }
 
