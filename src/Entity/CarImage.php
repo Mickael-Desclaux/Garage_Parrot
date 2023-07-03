@@ -19,10 +19,10 @@ class CarImage
     #[Vich\UploadableField(mapping: 'car', fileNameProperty: 'name', size: 'size')]
     private ?File $file = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $name = null;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private ?int $size = null;
 
     #[ORM\Column(nullable: true)]
@@ -35,30 +35,6 @@ class CarImage
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): static
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    public function getSize(): ?int
-    {
-        return $this->size;
-    }
-
-    public function setSize(int $size): static
-    {
-        $this->size = $size;
-
-        return $this;
     }
 
     public function getUpdatedAt(): ?\DateTimeImmutable
@@ -85,9 +61,6 @@ class CarImage
         return $this;
     }
 
-        /**
-     * Set the value of file
-     */
     public function setFile(?File $file): self
     {
         $this->file = $file;
@@ -99,11 +72,44 @@ class CarImage
         return $this;
     }
 
-    /**
-     * Get the value of file
-     */
     public function getFile(): ?File
     {
         return $this->file;
+    }
+
+    /**
+     * Get the value of name
+     */
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set the value of name
+     */
+    public function setName(?string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of size
+     */
+    public function getSize(): ?int
+    {
+        return $this->size;
+    }
+
+    /**
+     * Set the value of size
+     */
+    public function setSize(?int $size): self
+    {
+        $this->size = $size;
+
+        return $this;
     }
 }

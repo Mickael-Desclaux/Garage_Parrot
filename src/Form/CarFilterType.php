@@ -28,7 +28,8 @@ class CarFilterType extends AbstractType
 
             ->add('brand', TextType::class, [
                 'label' => 'Marque',
-                'required' => false
+                'required' => false,
+                "attr" => ['placeholder' => 'Recherche...']
             ])
 
             ->add('year', YearRangeType::class, [
@@ -54,7 +55,7 @@ class CarFilterType extends AbstractType
             "Électrique" => "Électrique",
             "Hybride" => "Hybride",
             ],
-            'multiple' => 'true',
+            "placeholder" => "Sélection",
             'required' => false
             ])
 
@@ -63,6 +64,7 @@ class CarFilterType extends AbstractType
             "choices" => [
             "Manuelle" => "Manuelle",
             "Automatique" => "Automatique"],
+            "placeholder" => "Sélection",
             'required' => false
             ])
 
@@ -74,7 +76,7 @@ class CarFilterType extends AbstractType
                     4 => 4,
                     5 => 5,
                 ],
-                'multiple' => 'true',
+                "placeholder" => "Sélection",
                 'required' => false
             ])
 

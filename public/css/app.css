@@ -1,9 +1,9 @@
-.navbar, .offcanvas-body, .offcanvas-header {
+.navbar, .offcanvas-end, .form-control {
     background-color: #262526;
 }
 
 .brand_logo {
-    max-width: 10em;
+    width: 10em;
 }
 
 .nav-link, .offcanvas-title {
@@ -43,22 +43,31 @@ h1 {
     color: #D92332;
 }
 
-.car-list-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.car-list {
-    flex: 4;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 form {
-    max-width: 15rem;
+    width: 15rem;
 }
 
 #car-detail-btn {
-    max-width: 10rem;
+    width: 10rem;
+}
+
+.form-group > label {
+    color: #f2f2f2;
+}
+
+.form-control {
+    background-color: #f2f2f2;
+}
+
+@media (min-width: 992px) {
+
+    .filter-toggle-btn {
+        display: none;
+    }
+    .form-group > label {
+        color: #262526;
+    }
+    .form-control, .form-choice {
+        width: 13.5rem;
+    }
 }

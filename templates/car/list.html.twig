@@ -5,81 +5,102 @@
 
 {% block body %}
 
-
-	<div class="container-fluid car-list-container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col mt-5 pt-5">
-				{{ form_start(filter_form, { 'attr': {'id': 'car_filter', 'action': path('filtered_cars')}}) }}
-
-				<div class="form-group">
-					{{ form_label(filter_form.price, 'Prix') }}
-					{{ form_widget(filter_form.price, { 'attr': {'class': 'form-control'} }) }}
-				</div>
-
-				<div class="form-group">
-					{{ form_label(filter_form.brand, 'Marque') }}
-					{{ form_widget(filter_form.brand, { 'attr': {'class': 'form-control'} }) }}
-				</div>
-
-				<div class="form-group">
-					{{ form_label(filter_form.year, 'Année') }}
-					{{ form_widget(filter_form.year, { 'attr': {'class': 'form-control'} }) }}
-				</div>
-
-				<div class="form-group">
-					{{ form_label(filter_form.mileage, 'Kilométrage') }}
-					{{ form_widget(filter_form.mileage, { 'attr': {'class': 'form-control'} }) }}
-				</div>
-
-				<div class="form-group">
-					{{ form_label(filter_form.horsepower, 'Puissance') }}
-					{{ form_widget(filter_form.horsepower, { 'attr': {'class': 'form-control'} }) }}
-				</div>
-
-				<div class="form-group">
-					{{ form_label(filter_form.energy, 'Énergie') }}
-					{{ form_widget(filter_form.energy, { 'attr': {'class': 'form-control'} }) }}
-				</div>
-
-				<div class="form-group">
-					{{ form_label(filter_form.gearbox, 'Boîte de vitesse') }}
-					{{ form_widget(filter_form.gearbox, { 'attr': {'class': 'form-control'} }) }}
-				</div>
-
-				<div class="form-group">
-					{{ form_label(filter_form.doors, 'Nombre de portes') }}
-					{{ form_widget(filter_form.doors, { 'attr': {'class': 'form-control'} }) }}
-				</div>
-
-				<div>{{ form_widget(filter_form.submit, { 'attr': {'class': 'btn btn-danger'} }) }}</div>
-
-				{{ form_end(filter_form) }}
-			</div>
-			<div class="car-list d-flex justify-content-around flex-wrap container mt-5" id="car-list">
-				{% for car in cars %}
-					<div class="card m-5 car" style="width: 25rem;">
-						{% for image in car.carImages %}
-							{% if image.name %}
-								<img src="{{ asset('images/cars/' ~ image.name) }}" alt="{{ car.brand }} {{ car.model }}" style="max-width: 10rem;">
-							{% endif %}
-						{% endfor %}
-
-						<div class="card-body">
-
-							{% if car.brand %}
-								<h3 class="card-title text-center">{{car.brand ~ " " ~ car.model}}</h3>
-							{% endif %}
-							<p class="card-text text-center">{{car.year}}</p>
-							<p class="card-text text-center">{{car.price ~ "€"}}</p>
-							<div class="d-flex justify-content-center">
-								<a href="{{path('voiture_detail', {id: car.id}) }}" class="btn btn-danger stretched-link d-flex justify-content-center" id="car-detail-btn">Détails</a>
-							</div>
-						</div>
-					</div>
-				{% endfor %}
+			<div class="mt-5">
+				<button class="navbar-toggler filter-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-label="Toggle filter">
+					<span class="btn btn-danger">Filtrer les résultats</span>
+				</button>
 			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-		<script src="{{ asset('js/form.js') }}"></script>
-	{% endblock %}
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="offcanvas-lg offcanvas-end filter-offcanvas" id="offcanvasScrolling" data-bs-scroll="true" data-bs-backdrop="false" aria-labelledby="offcanvasScrollingLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasScrollingLabel">Filtrer</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					{{ form_start(filter_form, { 'attr': {'id': 'car_filter', 'class': 'mt-5', 'action': path('filtered_cars')}}) }}
+					<div class="offcanvas-body">
+						<div id="form-display">
+							<div class="form-group">
+								{{ form_label(filter_form.price, 'Prix') }}
+								{{ form_widget(filter_form.price, { 'attr': {'class': 'form-control mt-1'} }) }}
+							</div>
+
+							<div class="form-group mt-3">
+								{{ form_label(filter_form.brand, 'Marque') }}
+								{{ form_widget(filter_form.brand, { 'attr': {'class': 'form-choice mt-1'} }) }}
+							</div>
+
+							<div class="form-group mt-3">
+								{{ form_label(filter_form.year, 'Année') }}
+								{{ form_widget(filter_form.year, { 'attr': {'class': 'form-control mt-1'} }) }}
+							</div>
+
+							<div class="form-group mt-3">
+								{{ form_label(filter_form.mileage, 'Kilométrage') }}
+								{{ form_widget(filter_form.mileage, { 'attr': {'class': 'form-control mt-1'} }) }}
+							</div>
+
+							<div class="form-group mt-3">
+								{{ form_label(filter_form.horsepower, 'Puissance') }}
+								{{ form_widget(filter_form.horsepower, { 'attr': {'class': 'form-control mt-1'} }) }}
+							</div>
+
+							<div class="form-group mt-3">
+								{{ form_label(filter_form.energy, 'Énergie') }}
+								{{ form_widget(filter_form.energy, { 'attr': {'class': 'form-choice mt-1'} }) }}
+							</div>
+
+							<div class="form-group mt-3">
+								{{ form_label(filter_form.gearbox, 'Boîte de vitesse') }}
+								{{ form_widget(filter_form.gearbox, { 'attr': {'class': 'form-choice mt-1'} }) }}
+							</div>
+
+							<div class="form-group mt-3">
+								{{ form_label(filter_form.doors, 'Nombre de portes') }}
+								{{ form_widget(filter_form.doors, { 'attr': {'class': 'form-choice mt-1'} }) }}
+							</div>
+
+							<div class="mt-3">{{ form_widget(filter_form.submit, { 'attr': {'class': 'btn btn-danger mt-1'} }) }}</div>
+						</div>
+					</div>
+					{{ form_end(filter_form) }}
+				</div>
+			</div>
+
+			<div class="col-lg-9">
+				<div class="car-list d-flex justify-content-around flex-wrap container-fluid mt-3" id="car-list">
+					{% for car in cars %}
+						<div class="card m-5 car" style="width: 35%;">
+							{% for image in car.carImages %}
+								{% if car.carImages|length > 0 %}
+									{% set image = car.carImages|first %}
+									<img src="{{ asset('images/cars/' ~ image.name) }}" alt="{{ car.brand }} {{ car.model }}" style="width: 100%; height: 100%;">
+								{% endif %}
+							{% endfor %}
+
+							<div class="card-body">
+
+								{% if car.brand %}
+									<h3 class="card-title text-center">{{car.brand ~ " " ~ car.model}}</h3>
+								{% endif %}
+								<p class="card-text text-center">{{car.year}}</p>
+								<p class="card-text text-center">{{car.price ~ "€"}}</p>
+								<div class="d-flex justify-content-center">
+									<a href="{{path('voiture_detail', {id: car.id}) }}" class="btn btn-danger stretched-link d-flex justify-content-center" id="car-detail-btn">Détails</a>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<script src="{{ asset('js/form.js') }}"></script>
+	<script src="{{ asset('js/offcanvas.js') }}"></script>
+{% endblock %}
 

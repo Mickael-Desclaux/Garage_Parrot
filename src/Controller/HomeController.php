@@ -25,7 +25,7 @@ class HomeController extends AbstractController
         $reviews = $reviewRepository->findBy(
             ['approved' => true],
             null,  
-            10                   
+            10
         );
 
         return $this->render('home/index.html.twig', [
