@@ -11,9 +11,9 @@ function loadPage() {
       carList.empty();
 
       response.car.forEach(function (car) {
-        var html = '<div class="card m-5 car" style="width: 25rem;">';
+        var html = '<div class="card m-4 car-card">';
         // Ajoute les informations de la voiture au HTML généré
-        html += '<img src="../images/cars/' + car.image + '" alt="' + car.brand + ' ' + car.model + '" style="max-width: 10rem;">';
+        html += '<img src="../images/cars/' + car.image + '" alt="' + car.brand + ' ' + car.model + '"class="car-card-img"">';
         html += '<div class="card-body">';
         html += '<h3 class="card-title text-center">' + car.brand + ' ' + car.model + '</h3>';
         html += '<p class="card-text text-center">' + car.year + '</p>';
