@@ -42,7 +42,7 @@ footer {
     color: #D9777F;
 }
 
-h1 {
+h1, h2 {
     color: #D92332;
 }
 
@@ -131,12 +131,12 @@ h1 {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1400px) {
     .table-media {
         margin-left: 3.5em;
     }
 
     nav, footer {
-        width: 120%;
+        width: 140%;
     }
 }

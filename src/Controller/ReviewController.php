@@ -15,7 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ReviewController extends AbstractController
 {
     #[Route('/vos_avis', name: 'review')]
-    public function newReview(Request $request, ManagerRegistry $doctrine, ReviewRepository $reviewRepository, PaginatorInterface $paginator): Response
+    public function newReview(Request $request, ManagerRegistry $doctrine, ReviewRepository $reviewRepository): Response
     {
         $review = new Review();
         $review->setApproved(false);
@@ -30,15 +30,14 @@ class ReviewController extends AbstractController
             return $this->redirectToRoute("home");
         }
 
-        $pagination = $paginator->paginate(
-            $reviewRepository->paginationQuery(),
-            $request->query->get('page', 1),
-            10
+        $reviewRepository = $doctrine->getRepository(Review::class);
+        $reviews = $reviewRepository->findBy(
+            ['approved' => true],
         );
 
         return $this->render('review/form.html.twig', [
             "review_form" => $form->createView(),
-            "pagination" => $pagination
+            "reviews" => $reviews
         ]);
     }
 }
