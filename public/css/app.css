@@ -42,16 +42,17 @@ footer {
     color: #D9777F;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: #D92332;
 }
 
 .form-group {
-    width: 13.5rem;
+    width: 13.5em;
 }
 
 #car-detail-btn {
-    width: 10rem;
+    width: 10em;
 }
 
 .form-group>label {
@@ -60,6 +61,10 @@ h1, h2 {
 
 .form-control {
     background-color: #f2f2f2;
+}
+
+.filter-btn {
+    width: 100%;
 }
 
 #myBtn {
@@ -83,13 +88,16 @@ h1, h2 {
 }
 
 .car-card {
-    width: 35vh;
-    height: 50vh;
+    width: 20em;
+    height: 25em;
+    border-radius: 1em;
 }
 
 .car-card-img {
-    width: 100%;
-    height: 100%;
+    aspect-ratio: 1.5;
+    object-fit: fill;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
 }
 
 #car-carousel,
@@ -127,16 +135,39 @@ h1, h2 {
 
     .form-group .form-control,
     .form-choice {
-        width: 13.5rem;
+        width: 13.5em;
+    }
+
+    #form-display {
+        background-color: #f2f2f2;
+        padding: 1em;
+        border-radius: 1em;
+    }
+
+    .form-control {
+        border: none;
     }
 }
 
-@media (min-width: 992px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1380px) {
+
     .table-media {
         margin-left: 3.5em;
     }
 
-    nav, footer {
-        width: 140%;
+    .car-card {
+        width: 20em;
+        height: 25em;
+        border-radius: 1em;
     }
+    
+    .car-card-img {
+        max-width: 100%;
+        max-height: 50%;
+        aspect-ratio: 1.5;
+        object-fit: fill;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+
 }

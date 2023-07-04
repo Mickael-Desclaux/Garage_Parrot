@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		{% block header %}
-			<nav class="navbar navbar-expand-lg">
+			<nav class="navbar navbar-expand-xl">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="/"><img class="brand_logo" src="{{asset('images/Brand_logo_desktop.png')}}" alt="Logo"></a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -75,34 +75,30 @@
 				</div>
 			</nav>
 		{% endblock %}
-		<div class="container"> {% block body %}{% endblock %}
-			</div>
-			{% block footer %}
-				<footer>
-					<div class="container-fluid pt-3 pb-3 d-flex justify-content-center">
-						<table>
-							<thead>
-								<tr>
-									<th>
-										<h3>Horaires d'ouverture :</h3>
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-							{% set opening = get_opening_hours() %}
-							{% set sortedOpening = opening|sort_days %}
-								{% for OpeningHours in sortedOpening %}
-									<tr>
-										<td>{{OpeningHours.day}}</td>
-										<td>{{OpeningHours.hours}}</td>
-									</tr>
-								{% endfor %}
-							</tbody>
+		{% block body %}{% endblock %}
+{% block footer %}
+<footer>
+	<div class="container-fluid pt-3 pb-3 d-flex justify-content-center">
+		<table>
+			<thead>
+				<tr>
+					<th>
+						<h3>Horaires d'ouverture :</h3>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% set opening = get_opening_hours() %}
+				{% set sortedOpening = opening|sort_days %}
+				{% for OpeningHours in sortedOpening %}
+					<tr>
+						<td>{{OpeningHours.day}}</td>
+						<td>{{OpeningHours.hours}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
 
-						</table>
-					</div>
-				</footer>
-			{% endblock %}
-		</body>
-	</html>
+		</table>
+	</div>
+</footer>{% endblock %}</body></html>
 

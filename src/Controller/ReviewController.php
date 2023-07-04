@@ -27,7 +27,7 @@ class ReviewController extends AbstractController
             $em = $doctrine->getManager();
             $em->persist($review);
             $em->flush();
-            return $this->redirectToRoute("home");
+            return $this->redirectToRoute("review");
         }
 
         $reviewRepository = $doctrine->getRepository(Review::class);

@@ -45,8 +45,8 @@
 				<h2 class="text-center">Les avis de nos clients</h2>
 			</div>
 			{% for review in reviews %}
-				<div class="card m-5 text-center" style="width: 20rem;">
-					<h2>{{ review.name }}</h2>
+				<div class="card m-5 text-center" style="width: auto;">
+					<h3>{{ review.name }}</h3>
 					<div class="card-body">
 						{% if review.comment %}
 							<p>{{ review.comment }}</p>

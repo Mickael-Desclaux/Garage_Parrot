@@ -16,7 +16,7 @@ class Review
     #[ORM\Column(length: 50)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 1000, nullable: true)]
+    #[ORM\Column(length: 2000, nullable: true)]
     private ?string $comment = null;
 
     #[ORM\Column]

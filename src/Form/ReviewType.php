@@ -41,23 +41,10 @@ class ReviewType extends AbstractType
                     "label" => "Commentaire",
                     "required" => false,
                     "constraints" => [
-                        new Length(["max" => 1000, "maxMessage" => "Votre commentaire doit comporter moins de 1000 caractères"])
+                        new Length(["max" => 2000, "maxMessage" => "Votre commentaire doit comporter moins de 2000 caractères"])
                     ]
                 ]
             )
-
-            // ->add('note', ChoiceType::class,
-            // ["required" => true,
-            // "choices" => [
-            //     '5' => 5,
-            //     '4' => 4,
-            //     '3' => 3,
-            //     '2' => 2,
-            //     '1' => 1,
-            // ],
-            // 'expanded' => true,
-            // 'multiple' => false,
-            // ])
 
             ->add(
                 'note',
