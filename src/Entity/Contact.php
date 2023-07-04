@@ -17,7 +17,7 @@ class Contact
     private ?string $subject;
 
     #[ORM\ManyToOne(targetEntity: "App\Entity\Car")]
-    #[ORM\JoinColumn(nullable:false, onDelete:"CASCADE")]
+    #[ORM\JoinColumn(nullable:true, onDelete:"CASCADE")]
     private $car;
 
     #[ORM\Column(length: 50)]

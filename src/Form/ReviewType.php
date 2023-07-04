@@ -50,7 +50,7 @@ class ReviewType extends AbstractType
             "data_class" => Review::class,
             'csrf_protection' => true,
             'csrf_field_name' => '_token',
-            'csrf_token_id' => 'review_item',
+            'csrf_token_id' => 'review_name',
         ]);
     }
 }

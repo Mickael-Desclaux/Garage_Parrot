@@ -19,7 +19,7 @@
 		<div class="row d-flex justify-content-between">
 			<h1 class="mt-1 col-sm-7" id="total-car">
 				{{ total_cars }}
-				véhicules en vente
+				Annonces Auto
 			</h1>
 			<div class="mt-4 text-end col-sm-4">
 				<button class="navbar-toggler filter-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" aria-label="Toggle filter">
@@ -88,12 +88,10 @@
 				<div class="car-list d-flex justify-content-around flex-wrap container-fluid" id="car-list">
 					{% for car in cars %}
 						<div class="card m-4 car-card">
-							{% for image in car.carImages %}
 								{% if car.carImages|length > 0 %}
 									{% set image = car.carImages|first %}
 									<img src="{{ asset('images/cars/' ~ image.name) }}" alt="{{ car.brand }} {{ car.model }}" class="car-card-img">
 								{% endif %}
-							{% endfor %}
 
 							<div class="card-body">
 

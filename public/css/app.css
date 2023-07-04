@@ -1,4 +1,6 @@
-.navbar, .offcanvas-end, .form-control {
+.navbar,
+.offcanvas-end,
+.form-control {
     background-color: #262526;
 }
 
@@ -6,7 +8,8 @@
     width: 10em;
 }
 
-.nav-link, .offcanvas-title {
+.nav-link,
+.offcanvas-title {
     color: #f2f2f2;
 }
 
@@ -51,7 +54,7 @@ h1 {
     width: 10rem;
 }
 
-.form-group > label {
+.form-group>label {
     color: #f2f2f2;
 }
 
@@ -73,31 +76,67 @@ h1 {
     padding: 15px;
     border-radius: 10px;
     font-size: 18px;
-  }
-  
-  #myBtn:hover {
-    background-color: #262526;
-  }
+}
 
-  .car-card {
+#myBtn:hover {
+    background-color: #262526;
+}
+
+.car-card {
     width: 35vh;
     height: 50vh;
-  }
+}
 
-  .car-card-img {
+.car-card-img {
     width: 100%;
     height: 100%;
-  }
+}
+
+#car-carousel,
+.car-carousel-img {
+    width: 40em;
+    height: 30em;
+}
+
+.sr-only {
+    color: black;
+}
+
+.table-label {
+    font-weight: bold;
+    padding-right: 4em;
+}
+
+.car-table td {
+    border-bottom: #262526 1px solid;
+}
+
+.car-table tr:last-child td {
+    border-bottom: none;
+}
 
 @media (min-width: 992px) {
 
     .filter-toggle-btn {
         display: none;
     }
-    .form-group > label {
+
+    .form-group>label {
         color: #262526;
     }
-    .form-control, .form-choice {
+
+    .form-group .form-control,
+    .form-choice {
         width: 13.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .table-media {
+        margin-left: 3.5em;
+    }
+
+    nav, footer {
+        width: 120%;
     }
 }
