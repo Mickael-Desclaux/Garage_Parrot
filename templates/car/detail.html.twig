@@ -15,8 +15,8 @@
 				</ol>
 			</nav>
 		</div>
-		<div class="row">
-			<div class="col-lg-8 m-2">
+		<div class="row d-flex justify-content-center offset-lg-1">
+			<div class="col-lg-6 mt-3">
 				<div id="car-carousel" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-inner">
 						{% for image in car.carImages %}
@@ -30,16 +30,14 @@
 					</div>
 					<button class="carousel-control-prev" type="button" data-bs-target="#car-carousel" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Précédent</span>
 					</button>
 					<button class="carousel-control-next" type="button" data-bs-target="#car-carousel" data-bs-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Suivant</span>
 					</button>
 
 				</div>
 			</div>
-			<div class="col-lg-3 d-flex justify-content-center table-media">
+			<div class="col-lg-4 ms-5 d-flex table-media">
 				<table>
 					<thead>
 						<tr>
@@ -131,7 +129,7 @@
 
 
 		<div class="row mt-5">
-			<div class="col-lg-12 mb-5">
+			<div class="col-lg-8 offset-lg-2 mb-5">
 				<h2 class="text-center">Ce véhicule vous intéresse? Contactez nous!</h2>
 				{{ form_start(contact_form) }}
 				{{ form_row(contact_form._token) }}
@@ -169,7 +167,9 @@
 				{{ form_end(contact_form) }}
 			</div>
 			<div class="col-lg-12 text-center mb-5">
-				<h3>Ou par téléphone pendant les heures d'ouvertures du garage : <a href="tel:+123456789">01 23 45 67 89</a></h3>
+				<h3>Ou par téléphone pendant les heures d'ouvertures du garage :
+					<a href="tel:+123456789">01 23 45 67 89</a>
+				</h3>
 			</div>
 		</div>
 
