@@ -47,6 +47,21 @@ h2 {
     color: #D92332;
 }
 
+h3 {
+    color: #262526;
+    font-size: large;
+}
+
+#hours-title {
+    color: #D9777F;
+}
+
+.content > h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+}
+
 .form-group {
     width: 13.5em;
 }
@@ -55,7 +70,7 @@ h2 {
     width: 10em;
 }
 
-.form-group>label {
+.form-group > label {
     color: #f2f2f2;
 }
 
@@ -123,13 +138,39 @@ h2 {
     border-bottom: none;
 }
 
+.services-card-img {
+    aspect-ratio: 1.5;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+}
+
+.card-footer {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.card-footer p {
+    margin: 0.2em;
+}
+
+.services-price {
+    color: #D92332;
+}
+
+.carousel-inner{
+    background-color: #f2f2f2;
+    margin-bottom: 2em;
+    border-radius: 1em;
+    margin-top: 1.5em;
+}
+
 @media (min-width: 992px) {
 
     .filter-toggle-btn {
         display: none;
     }
 
-    .form-group>label {
+    .form-group > label {
         color: #262526;
     }
 
@@ -160,7 +201,7 @@ h2 {
         height: 25em;
         border-radius: 1em;
     }
-    
+
     .car-card-img {
         max-width: 100%;
         max-height: 50%;

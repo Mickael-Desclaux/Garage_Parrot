@@ -30,7 +30,7 @@ class CarController extends AbstractController
             $filter = $form->getData();
             $cars = $carRepository->findCarsByFilter($filter);
         }
-        
+
         return $this->render('car/list.html.twig', [
             "cars" => $cars,
             'filter_form' => $form->createView(),

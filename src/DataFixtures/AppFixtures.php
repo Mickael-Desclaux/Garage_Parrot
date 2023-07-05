@@ -10,8 +10,9 @@ use App\Entity\User;
 class AppFixtures extends Fixture
 {
     private $passwordHasher;
-    
-    public function __construct(UserPasswordHasherInterface $passwordHasher) {
+
+    public function __construct(UserPasswordHasherInterface $passwordHasher)
+    {
         $this->passwordHasher = $passwordHasher;
     }
 
@@ -19,8 +20,8 @@ class AppFixtures extends Fixture
     {
         $user = new User($this->passwordHasher);
 
-        $user->setEmail("testAdmin2")->setPassword($this->passwordHasher->hashPassword($user,"Azerty12345"))->setRoles(['ROLE_ADMIN']);
-        
+        $user->setEmail("testAdmin2")->setPassword($this->passwordHasher->hashPassword($user, "Azerty12345"))->setRoles(['ROLE_ADMIN']);
+
         $manager->persist($user);
 
         $manager->flush();

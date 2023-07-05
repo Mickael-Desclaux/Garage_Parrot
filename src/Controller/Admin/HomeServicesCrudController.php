@@ -6,6 +6,7 @@ use App\Entity\HomeServices;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
@@ -24,11 +25,11 @@ class HomeServicesCrudController extends AbstractCrudController
         yield TextField::new('title')->setLabel('Titre');
         yield TextareaField::new('content')->setLabel('Description');
         yield NumberField::new('price')
-        ->setLabel('Prix')
-        ->setNumDecimals('2');
+            ->setLabel('Prix')
+            ->setNumDecimals('2');
         yield ImageField::new('image')
-        ->setUploadDir('public/images/home/services')
-        ->setLabel('Image');
+            ->setUploadDir('public/images/home/services')
+            ->setLabel('Image');
     }
 
     public function configureActions(Actions $actions): Actions
