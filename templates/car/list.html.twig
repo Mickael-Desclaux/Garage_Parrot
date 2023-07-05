@@ -79,7 +79,7 @@
                                 {{ form_label(filter_form.doors, 'Nombre de portes') }}
                                 {{ form_widget(filter_form.doors, { 'attr': {'class': 'form-choice mt-1'} }) }}
                             </div>
-
+                            <div class="mt-3">{{ form_widget(filter_form.reset, { 'attr': {'class': 'btn btn-danger filter-btn mt-1'} }) }}</div>
                             <div class="mt-3">{{ form_widget(filter_form.submit, { 'attr': {'class': 'btn btn-danger filter-btn mt-1'} }) }}</div>
                         </div>
                     </div>

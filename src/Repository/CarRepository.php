@@ -44,7 +44,6 @@ class CarRepository extends ServiceEntityRepository
         $queryBuilder = $this->createQueryBuilder('car');
 
 
-
         if (!empty($filter["car_filter"]["price"]['price_min'])) {
             $queryBuilder
                 ->andWhere('car.price >= :price_min')
@@ -61,10 +60,10 @@ class CarRepository extends ServiceEntityRepository
             $brand = preg_replace('/[^a-zA-Z0-9\s]/', '', $filter["car_filter"]['brand']);
             $brand = str_replace(' ', '-', $brand);
             $queryBuilder
-                ->andWhere('car.brand LIKE :brand')
+                ->andWhere('LOWER(car.brand) LIKE LOWER(:brand)')
                 ->setParameter('brand', '%' . $brand . '%');
         }
-        
+
 
         if (!empty($filter["car_filter"]["year"]['year_min']) && is_numeric($filter["car_filter"]["year"]['year_min'])) {
             $queryBuilder
@@ -107,7 +106,7 @@ class CarRepository extends ServiceEntityRepository
                 ->andWhere('car.energy = :energy')
                 ->setParameter('energy', $filter["car_filter"]['energy']);
         }
-        
+
 
         if (!empty($filter["car_filter"]['gearbox'])) {
             $queryBuilder
@@ -120,15 +119,15 @@ class CarRepository extends ServiceEntityRepository
                 ->andWhere('car.doors = :doors')
                 ->setParameter('doors', $filter["car_filter"]['doors']);
         }
-        
+
         return $queryBuilder->getQuery()->getResult();
     }
 
     public function totalCarCount()
     {
         return $this->createQueryBuilder('a')
-        ->select('count(a.id)')
-        ->getQuery()
-        ->getSingleScalarResult();
+            ->select('count(a.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
     }
 }

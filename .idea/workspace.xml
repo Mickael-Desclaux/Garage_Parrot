@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Improve code readability and adjust content layout&#10;&#10;.&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/offcanvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/offcanvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CarFilterType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CarFilterType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CarRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CarRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/car/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car/list.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +27,44 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -213,7 +250,7 @@
       <updated>1687537138304</updated>
       <workItem from="1687537139576" duration="112000" />
       <workItem from="1688550251031" duration="1362000" />
-      <workItem from="1688551638504" duration="12405000" />
+      <workItem from="1688551638504" duration="16317000" />
     </task>
     <task id="LOCAL-00001" summary="Add new vendor paths, update settings, adjust margins and modify app fixtures.">
       <option name="closed" value="true" />

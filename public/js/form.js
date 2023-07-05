@@ -1,5 +1,5 @@
 function loadPage() {
-  var formData = $('#car_filter').serialize();
+  const formData = $('#car_filter').serialize();
 
   $.ajax({
     url: '/filtered_cars',
@@ -7,11 +7,11 @@ function loadPage() {
     data: formData,
     dataType: 'json',
     success: function (response) {
-      var carList = $('#car-list');
+      const carList = $('#car-list');
       carList.empty();
 
       response.car.forEach(function (car) {
-        var html = '<div class="card m-4 car-card">';
+        let html = '<div class="card m-4 car-card">';
         // Ajoute les informations de la voiture au HTML généré
         html += '<img src="../images/cars/' + car.image + '" alt="' + car.brand + ' ' + car.model + '"class="car-card-img"">';
         html += '<div class="card-body">';
@@ -35,8 +35,16 @@ function loadPage() {
 }
 
 $(document).ready(function () {
+  const resetBtn = document.getElementById('car_filter_reset');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function() {
+      document.getElementById('car_filter').reset();
+      loadPage();
+    });
+  }
+
   $('#car_filter').on('submit', function (e) {
     e.preventDefault();
     loadPage();
   });
-})
+});
