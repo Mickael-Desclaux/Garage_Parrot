@@ -1,6 +1,5 @@
 .navbar,
-.offcanvas-end,
-.form-control {
+.offcanvas-end {
     background-color: #262526;
 }
 
@@ -40,6 +39,10 @@
 footer {
     background-color: #262526;
     color: #D9777F;
+}
+
+h1 {
+    font-size: 2.5em;
 }
 
 h1,
@@ -105,24 +108,20 @@ h3 {
 .car-card {
     width: 20em;
     height: 25em;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
 
 .car-card-img {
     aspect-ratio: 1.5;
     object-fit: fill;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
 }
 
 .car-carousel-img {
     width: 100%;
     height: 100%;
     aspect-ratio: 1.5;
-}
-
-.sr-only {
-    color: black;
 }
 
 .table-label {
@@ -196,21 +195,6 @@ h3 {
         margin-left: 3.5em;
     }
 
-    .car-card {
-        width: 20em;
-        height: 25em;
-        border-radius: 1em;
-    }
-
-    .car-card-img {
-        max-width: 100%;
-        max-height: 50%;
-        aspect-ratio: 1.5;
-        object-fit: fill;
-        border-top-left-radius: 1em;
-        border-top-right-radius: 1em;
-    }
-
 }
 
 @media (max-width: 992px) {
@@ -227,5 +211,14 @@ h3 {
 
     .table-title {
         text-align: center;
+    }
+
+    #car_filter_price, #car_filter_year, #car_filter_mileage, #car_filter_horsepower {
+        background-color: #262526;
+        border: none;
+    }
+
+    #car_filter_brand, #car_filter_energy, #car_filter_gearbox, #car_filter_doors {
+        margin-left: 0.75em;
     }
 }
