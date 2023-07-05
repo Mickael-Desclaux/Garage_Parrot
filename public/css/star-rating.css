@@ -23,3 +23,23 @@
 .card-body .star-rating__star {
     color: #D92332;
 }
+
+#star {
+    color: #D92332;
+}
+
+#review_submit {
+    width: 15%;
+}
+
+.review-btn {
+    text-align: center;
+    justify-content: center;
+}
+
+.form-note, .star-rating {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    vertical-align: sub;
+}

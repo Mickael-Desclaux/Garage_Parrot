@@ -7,8 +7,18 @@
 
 {% block body %}
 	<div class="container-fluid">
+		<div class="row mt-2 offset-lg-1 offset-md-1">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="/">Accueil</a>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page">Vos avis</li>
+				</ol>
+			</nav>
+		</div>
 		<div class="row mt-5">
-			<div class="col-lg-12 mb-5">
+			<div class="col-lg-8 offset-lg-2 mb-5 review-form">
 				<h1 class="text-center">Déposer un avis</h1>
 				{{ form_start(review_form) }}
 				{{ form_row(review_form._token) }}
@@ -22,7 +32,7 @@
 					{{ form_widget(review_form.comment, { 'attr': { 'class': 'form-control' }})}}
 					{{ form_errors(review_form.comment )}}
 				</div>
-				<div class="mb-2">
+				<div class="mb-2 form-note">
 					{{ form_label(review_form.note, null, { 'label_attr': { 'class': 'form-label' }}) }}
 					<div class="star-rating">
 						{% for i in 5..1 %}
@@ -34,36 +44,37 @@
 					</div>
 					{{ form_errors(review_form.note )}}
 				</div>
-				<div class="mt-3">{{ form_widget(review_form.submit, { 'attr': {'class': 'btn btn-danger mt-1'} }) }}</div>
+				<div class="mt-3 review-btn">{{ form_widget(review_form.submit, { 'attr': {'class': 'btn btn-danger mt-1', 'id': 'review-btn'} }) }}</div>
 				{{ form_end(review_form, {'render_rest': false}) }}
 			</div>
 		</div>
 
 
-		<div class="row d-flex justify-content-around flex-wrap mt-2">
-			<div class="mb-4">
-				<h2 class="text-center">Les avis de nos clients</h2>
-			</div>
-			{% for review in reviews %}
-				<div class="card m-5 text-center" style="width: auto;">
-					<h3>{{ review.name }}</h3>
-					<div class="card-body">
-						{% if review.comment %}
-							<p>{{ review.comment }}</p>
-						{% endif %}
-						{% for i in 1..5 %}
-							{% if i <= review.note %}
-								<span class="star-rating__star">&#9733;</span>
-								<!-- Etoile remplie -->
-							{% else %}
-								<span class="star-rating__star">&#9734;</span>
-								<!-- Etoile vide -->
-							{% endif %}
-						{% endfor %}
-
-					</div>
+		<div class="row mt-2">
+			<div class="col-lg-8 offset-lg-2 d-flex justify-content-center flex-wrap">
+				<div class="mb-4">
+					<h2 class="text-center">Les avis de nos clients</h2>
 				</div>
-			{% endfor %}
+				{% for review in reviews %}
+					<div class="card m-5 text-center">
+						<h3>{{ review.name }}</h3>
+						<div class="card-body">
+							{% for i in 1..5 %}
+								{% if i <= review.note %}
+									<span class="star-rating__star" id="star">&#9733;</span>
+									<!-- Etoile remplie -->
+								{% else %}
+									<span class="star-rating__star" id="star">&#9734;</span>
+									<!-- Etoile vide -->
+								{% endif %}
+							{% endfor %}
+							{% if review.comment %}
+								<p class="mt-3">{{ review.comment }}</p>
+							{% endif %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
 		</div>
 		<button onclick="topFunction()" id="myBtn" title="Go to top">Retour en haut de page</button>
 	</div>

@@ -38,13 +38,13 @@ class DashboardController extends AbstractDashboardController
 
         if ($this->isGranted('ROLE_ADMIN')) {
         yield MenuItem::linkToCrud('Page d\'accueil', 'fa fa-list', HomeContent::class)->setPermission('ROLE_ADMIN');
-        yield MenuItem::linkToCrud('Prestations', 'fas fa-list', HomeServices::class);
-        yield MenuItem::linkToCrud('Horaires', 'fas fa-list', OpeningHours::class);
+        yield MenuItem::linkToCrud('Prestations', 'fas fa-screwdriver-wrench', HomeServices::class);
+        yield MenuItem::linkToCrud('Horaires', 'fas fa-clock', OpeningHours::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
         }
         
-        yield MenuItem::linkToCrud('Voitures', 'fas fa-list', Car::class);
+        yield MenuItem::linkToCrud('Voitures', 'fas fa-car-side', Car::class);
         yield MenuItem::linkToCrud('Avis Clients', 'fas fa-star', Review::class);
-        yield MenuItem::linkToCrud('Contacts', 'fas fa-list', Contact::class);
+        yield MenuItem::linkToCrud('Contacts', 'fas fa-envelope', Contact::class);
     }
 }
