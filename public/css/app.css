@@ -17,6 +17,10 @@
     text-decoration: underline;
 }
 
+.nav-link:visited {
+    color: #f2f2f2;
+}
+
 .navConnection {
     color: #D92332;
 }
