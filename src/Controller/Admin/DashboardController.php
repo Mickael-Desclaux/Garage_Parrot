@@ -46,5 +46,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Voitures', 'fas fa-car-side', Car::class);
         yield MenuItem::linkToCrud('Avis Clients', 'fas fa-star', Review::class);
         yield MenuItem::linkToCrud('Contacts', 'fas fa-envelope', Contact::class);
+        yield MenuItem::linkToLogout('Déconnexion', 'fa-sharp fa-solid fa-circle-xmark');
     }
 }

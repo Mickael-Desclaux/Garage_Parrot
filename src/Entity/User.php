@@ -46,7 +46,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     )]
     private ?string $password = null;
 
-    #[ORM\OneToMany(targetEntity: "App\Entity\Car", mappedBy: "user")]
+    #[ORM\OneToMany(mappedBy: "user", targetEntity: "App\Entity\Car")]
     private $car;
     
     public function __construct() {
@@ -123,17 +123,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    /**
-     * Get the value of car
-     */
     public function getCar()
     {
         return $this->car;
     }
 
-    /**
-     * Set the value of car
-     */
     public function setCar($car): self
     {
         $this->car = $car;

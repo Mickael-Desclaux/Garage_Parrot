@@ -35,7 +35,7 @@ class ReviewCrudController extends AbstractCrudController
         4 => 4,
         5 => 5,
        ]);
-       yield BooleanField::new('approved');
+       yield BooleanField::new('approved')->setLabel('Approuvé');
     }
     
 }

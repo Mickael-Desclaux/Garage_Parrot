@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-2 offset-lg-1 me-5">
+            <div class="col-lg-2 offset-lg-1 me-5 d-flex justify-content-center">
                 <div class="offcanvas-lg offcanvas-end filter-offcanvas" id="offcanvasScrolling" data-bs-scroll="true"
                      data-bs-backdrop="false" aria-labelledby="offcanvasScrollingLabel">
                     <div class="offcanvas-header">
@@ -87,10 +87,10 @@
                 </div>
             </div>
 
-            <div class="col-lg-8 ms-4">
+            <div class="col-lg-8">
                 <div class="car-list d-flex justify-content-around flex-wrap" id="car-list">
                     {% for car in cars %}
-                        <div class="card mt-4 ms-2 me-1 mb-4 car-card">
+                        <div class="card mt-4 ms-1 me-1 mb-4 car-card">
                             {% if car.carImages|length > 0 %}
                                 {% set image = car.carImages|first %}
                                 <img src="{{ asset('images/cars/' ~ image.name) }}"
@@ -100,10 +100,10 @@
                             <div class="card-body">
 
                                 {% if car.brand %}
-                                    <h3 class="card-title text-center">{{ car.brand ~ " " ~ car.model }}</h3>
+                                    <h2 class="card-title text-center">{{ car.brand ~ " " ~ car.model }}</h2>
                                 {% endif %}
                                 <p class="card-text text-center">{{ car.year }}</p>
-                                <p class="card-text text-center">{{ car.price ~ "€" }}</p>
+                                <p class="card-text text-center car-price">{{ car.price|number_format(0, ',', ' ') }} €</p>
                                 <div class="d-flex justify-content-center">
                                     <a href="{{ path('voiture_detail', {id: car.id}) }}"
                                        class="btn btn-danger stretched-link d-flex justify-content-center"
