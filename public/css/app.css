@@ -3,6 +3,10 @@
     background-color: #262526;
 }
 
+.navbar .container-fluid {
+    width: 100%;
+}
+
 .brand_logo {
     width: 10em;
 }
@@ -17,8 +21,12 @@
     text-decoration: underline;
 }
 
-.nav-link:visited {
+.nav-user:visited {
     color: #f2f2f2;
+}
+
+.navConnection:visited {
+    color: #D92332;
 }
 
 .navConnection {
@@ -133,6 +141,11 @@ h3 {
     padding-right: 8em;
 }
 
+.car-price {
+    font-weight: bold;
+    color: #D92332;
+}
+
 .car-table td {
     border-bottom: #262526 1px solid;
 }
@@ -201,16 +214,20 @@ h3 {
 
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .table-media {
         display: flex;
         justify-content: center;
-        margin-top: 3em;
-        max-width: 100%;
+        margin-top: 1em;
+        margin-bottom: 2em;
     }
 
     .table-label {
-        padding-right: 10em;
+        padding-right: 15em;
+    }
+
+    .table-label, .table-value {
+        padding-top: 1em;
     }
 
     .table-title {

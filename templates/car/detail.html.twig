@@ -37,12 +37,12 @@
 
 				</div>
 			</div>
-			<div class="col-lg-3 d-flex table-media">
+			<div class="col-lg-3 col-sm-12 mt-3 ms-5 d-flex table-media">
 				<table>
 					<thead>
 						<tr>
 							<th colspan="2" class="table-title">
-								<h1>Détails</h1>
+								<h2>Détails</h2>
 							</th>
 						</tr>
 					</thead>
@@ -51,7 +51,7 @@
 							<td class="table-label">
 								Marque
 							</td>
-							<td>
+							<td class="table-value">
 								{{ car.brand }}
 							</td>
 						</tr>
@@ -59,7 +59,7 @@
 							<td class="table-label">
 								Modèle
 							</td>
-							<td>
+							<td class="table-value">
 								{{ car.model }}
 							</td>
 						</tr>
@@ -67,7 +67,7 @@
 							<td class="table-label">
 								Année
 							</td>
-							<td>
+							<td class="table-value">
 								{{ car.year }}
 							</td>
 						</tr>
@@ -75,7 +75,7 @@
 							<td class="table-label">
 								Kilométrage
 							</td>
-							<td>
+							<td class="table-value">
 								{{ car.mileage }}
 								km
 							</td>
@@ -84,7 +84,7 @@
 							<td class="table-label">
 								Énergie
 							</td>
-							<td>
+							<td class="table-value">
 								{{ car.energy }}
 							</td>
 						</tr>
@@ -92,7 +92,7 @@
 							<td class="table-label">
 								Boîte de vitesse
 							</td>
-							<td>
+							<td class="table-value">
 								{{ car.gearbox }}
 							</td>
 						</tr>
@@ -100,7 +100,7 @@
 							<td class="table-label">
 								Nombre de portes
 							</td>
-							<td>
+							<td class="table-value">
 								{{ car.doors }}
 							</td>
 						</tr>
@@ -108,7 +108,7 @@
 							<td class="table-label">
 								Puissance
 							</td>
-							<td>
+							<td class="table-value">
 								{{ car.horsepower }}
 								ch
 							</td>
@@ -117,7 +117,7 @@
 							<td class="table-label">
 								Prix
 							</td>
-							<td>
+							<td class="table-value car-price">
 								{{ car.price }}
 								€
 							</td>
@@ -129,8 +129,8 @@
 
 
 		<div class="row mt-5">
-			<div class="col-lg-8 offset-lg-2 mb-5">
-				<h2 class="text-center">Ce véhicule vous intéresse? Contactez nous!</h2>
+			<div class="col-lg-8 offset-lg-2 mb-3">
+				<h2 class="text-center mb-5">Ce véhicule vous intéresse ? Contactez-nous !</h2>
 				{{ form_start(contact_form) }}
 				{{ form_row(contact_form._token) }}
 				<div class="mb-2 mt-4">
@@ -158,16 +158,16 @@
 					{{ form_widget(contact_form.email, { 'attr': { 'class': 'form-control' }})}}
 					{{ form_errors(contact_form.email )}}
 				</div>
-				<div class="mb-2">
+				<div class="mb-3">
 					{{ form_label(contact_form.message, null, { 'label_attr': { 'class': 'form-label' }}) }}
 					{{ form_widget(contact_form.message, { 'attr': { 'class': 'form-control' }})}}
 					{{ form_errors(contact_form.message )}}
 				</div>
-				<div class="mt-3">{{ form_widget(contact_form.submit, { 'attr': {'class': 'btn btn-danger mt-1'} }) }}</div>
+				<div class="mt-4 submit-contact-btn d-flex justify-content-center">{{ form_widget(contact_form.submit, { 'attr': {'class': 'btn btn-danger mt-1'} }) }}</div>
 				{{ form_end(contact_form) }}
 			</div>
 			<div class="col-lg-12 text-center mb-5">
-				<h3>Ou par téléphone pendant les heures d'ouvertures du garage :
+				<h3 class="mt-5">Vous pouvez aussi nous contacter par téléphone pendant les heures d'ouvertures du garage :
 					<a href="tel:+123456789">01 23 45 67 89</a>
 				</h3>
 			</div>
