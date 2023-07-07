@@ -27,6 +27,12 @@ class ReviewController extends AbstractController
             $em = $doctrine->getManager();
             $em->persist($review);
             $em->flush();
+
+            $this->addFlash(
+                'notice',
+                'Votre avis a été publié, il sera affiché sur le site après validation du personnel!'
+            );
+
             return $this->redirectToRoute("review");
         }
 

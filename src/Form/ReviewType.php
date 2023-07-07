@@ -20,7 +20,6 @@ class ReviewType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-
             ->add(
                 'name',
                 TextType::class,
@@ -33,7 +32,6 @@ class ReviewType extends AbstractType
                     ]
                 ]
             )
-
             ->add(
                 'comment',
                 TextareaType::class,
@@ -45,23 +43,16 @@ class ReviewType extends AbstractType
                     ]
                 ]
             )
-
             ->add(
                 'note',
                 IntegerType::class,
                 [
                     "required" => true,
                     "constraints" => [
-                        new Range([
-                            "min" => 1,
-                            "max" => 5,
-                            "minMessage" => "Vous devez attribuer au moins une étoile",
-                            "maxMessage" => "Vous ne pouvez pas attribuer plus de 5 étoiles"
-                        ])
+                        new NotBlank(["message" => "Veuillez attribuer une note"])
                     ]
                 ]
             )
-
             ->add('submit', SubmitType::class, [
                 'label' => 'Publier',
                 'attr' => ['class' => 'btn btn-danger']

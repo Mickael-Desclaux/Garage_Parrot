@@ -16,7 +16,7 @@ class ReviewCrudController extends AbstractCrudController
         return Review::class;
     }
 
-    public function createEntity(string $entityFqcn)
+    public function createEntity(string $entityFqcn): Review
     {
         $review = new Review();
         $review->setApproved(false);

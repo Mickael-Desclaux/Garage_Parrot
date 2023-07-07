@@ -51,6 +51,11 @@
                 </div>
                 <div class="mt-3 review-btn">{{ form_widget(review_form.submit, { 'attr': {'class': 'btn btn-danger mt-1', 'id': 'review-btn'} }) }}</div>
                 {{ form_end(review_form, {'render_rest': false}) }}
+                {% for message in app.flashes('notice') %}
+                    <div class="alert alert-success mt-3 text-center">
+                        {{ message }}
+                    </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -60,9 +65,10 @@
                 <div class="mb-4">
                     <h2 class="text-center">Les avis de nos clients</h2>
                 </div>
+                {% if reviews|length > 0 %}
                 {% for review in reviews %}
                     <div class="card m-5 text-center">
-                        <h3>{{ review.name }}</h3>
+                        <h3 class="mt-3">{{ review.name }}</h3>
                         <div class="card-body">
                             {% for i in 1..5 %}
                                 {% if i <= review.note %}
@@ -79,6 +85,13 @@
                         </div>
                     </div>
                 {% endfor %}
+                {% else %}
+                    <div class="card m-5 text-center d-flex justify-content-center col-lg-12">
+                        <div class="card-body">
+                            <h3>Soyez le premier à publier un avis !</h3>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </div>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Retour en haut de page</button>

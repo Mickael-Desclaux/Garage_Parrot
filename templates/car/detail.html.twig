@@ -168,6 +168,11 @@
                 </div>
                 <div class="mt-4 submit-contact-btn d-flex justify-content-center">{{ form_widget(contact_form.submit, { 'attr': {'class': 'btn btn-danger mt-1'} }) }}</div>
                 {{ form_end(contact_form) }}
+                {% for message in app.flashes('notice') %}
+                    <div class="alert alert-success mt-3 text-center">
+                        {{ message }}
+                    </div>
+                {% endfor %}
             </div>
             <div class="col-lg-12 text-center mb-5">
                 <h3 class="mt-5">Vous pouvez aussi nous contacter par téléphone pendant les heures d'ouvertures du

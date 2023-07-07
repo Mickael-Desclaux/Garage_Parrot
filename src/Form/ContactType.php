@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Validator\Constraints\Regex;
 
 class ContactType extends AbstractType
 {
@@ -27,6 +28,11 @@ class ContactType extends AbstractType
                 TextType::class,
                 [
                     "label" => "Sujet",
+                    "required" => true,
+                    "constraints" => [
+                        new NotBlank(["message" => "Veuillez renseigner le sujet de votre message"]),
+                        new Length(["max" => 50, "maxMessage" => "Le sujet de votre message doit faire moins de 50 caractères"])
+                        ]
                 ]
             )
 
@@ -63,7 +69,11 @@ class ContactType extends AbstractType
                     "label" => "Numéro de téléphone",
                     "required" => true,
                     "constraints" => [
-                        new NotBlank(["message" => "Veuillez renseigner un numéro de téléphone"])
+                        new NotBlank(["message" => "Veuillez renseigner un numéro de téléphone"]),
+                        new Regex([
+                            'pattern' => '/^((\+|00)33\s?|0)[1-9](\s?\d{2}){4}$/',
+                            'message' => 'Le numéro de téléphone est invalide',
+                        ]),
                     ]
                 ]
             )

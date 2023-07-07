@@ -88,7 +88,13 @@ class CarController extends AbstractController
             $em = $doctrine->getManager();
             $em->persist($contact);
             $em->flush();
-            return $this->redirectToRoute("home");
+
+            $this->addFlash(
+                'notice',
+                'Votre demande de contact a bien été envoyée.'
+            );
+
+            return $this->redirectToRoute("voiture_detail", ['id' => $car->getId()]);
         }
         return $this->render('car/detail.html.twig', [
             'car' => $car,

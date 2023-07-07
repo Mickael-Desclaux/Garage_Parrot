@@ -52,9 +52,16 @@ a {
     color: #D94350;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 footer {
     background-color: #262526;
     color: #D9777F;
+    margin-top: auto;
 }
 
 h1 {

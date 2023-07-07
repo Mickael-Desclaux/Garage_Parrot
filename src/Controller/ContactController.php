@@ -23,7 +23,13 @@ class ContactController extends AbstractController
             $em = $doctrine->getManager();
             $em->persist($contact);
             $em->flush();
-            return $this->redirectToRoute("home");
+
+            $this->addFlash(
+                'notice',
+                'Votre demande de contact a bien été envoyée.'
+            );
+
+            return $this->redirectToRoute("app_contact");
         }
         return $this->render('contact/index.html.twig', [
             'contact_form' => $form->createView(),
