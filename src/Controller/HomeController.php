@@ -24,7 +24,7 @@ class HomeController extends AbstractController
         $reviewRepository = $doctrine->getRepository(Review::class);
         $reviews = $reviewRepository->findBy(
             ['approved' => true],
-            null,  
+            null,
             10
         );
 

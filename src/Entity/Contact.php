@@ -17,7 +17,7 @@ class Contact
     private ?string $subject;
 
     #[ORM\ManyToOne(targetEntity: "App\Entity\Car")]
-    #[ORM\JoinColumn(nullable:true, onDelete:"CASCADE")]
+    #[ORM\JoinColumn(nullable: true, onDelete: "CASCADE")]
     private $car;
 
     #[ORM\Column(length: 50)]
@@ -112,17 +112,13 @@ class Contact
         return $this;
     }
 
-    /**
-     * Get the value of phone
-     */
+
     public function getPhone(): ?string
     {
         return $this->phone;
     }
 
-    /**
-     * Set the value of phone
-     */
+
     public function setPhone(?string $phone): self
     {
         $this->phone = $phone;

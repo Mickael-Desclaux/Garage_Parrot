@@ -43,7 +43,7 @@ class Car
     private ?int $price = null;
 
     #[ORM\ManyToOne(targetEntity: "App\Entity\User", inversedBy: "car")]
-    #[ORM\JoinColumn(name:"user_id", referencedColumnName:"id")]
+    #[ORM\JoinColumn(name: "user_id", referencedColumnName: "id")]
     private $user;
 
     #[ORM\OneToMany(mappedBy: 'car', targetEntity: CarImage::class, orphanRemoval: true, cascade: ['persist'])]
