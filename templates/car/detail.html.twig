@@ -45,7 +45,7 @@
                 <div class="card w-100 text-center">
                     <div class="card-body car-card-title">
                         <h1 class="card-title">{{ car.brand ~ " " ~ car.model }}</h1>
-                        <h6 class="card-subtitle mt-2 mb-3 text-body-secondary">{{ car.year ~ " - " ~ car.mileage ~ "km" }}</h6>
+                        <h4 class="card-subtitle mt-2 mb-3 text-body-secondary">{{ car.year ~ " - " ~ car.mileage|number_format(0, ',', ' ') ~ " " ~ "km" }}</h4>
                         <h2 class="card-text car-price mb-3">{{ car.price|number_format(0, ',', ' ') }}€</h2>
                         <a href="#car-contact-form" class="btn btn-danger">Contactez-nous</a>
                     </div>

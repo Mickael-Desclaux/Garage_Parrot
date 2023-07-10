@@ -36,8 +36,7 @@
                     {{ form_widget(review_form.comment, { 'attr': { 'class': 'form-control' }}) }}
                     {{ form_errors(review_form.comment ) }}
                 </div>
-                <div class="mb-2 form-note">
-                    {{ form_label(review_form.note, null, { 'label_attr': { 'class': 'form-label' }}) }}
+                <div class="mb-2 form-note d-flex justify-content-center">
                     <div class="star-rating">
                         {% for i in 1..5 %}
                             <input id="{{ review_form.note.vars.id }}_{{ i }}" type="radio"
@@ -47,8 +46,12 @@
                                    class="star-rating__star">&#9733;</label>
                         {% endfor %}
                     </div>
-                    {{ form_errors(review_form.note ) }}
                 </div>
+                {% if form_errors(review_form.note) %}
+                    <div class="mt-1 alert alert-danger text-center error-message">
+                        {{ review_form.note.vars.errors[0].message }}
+                    </div>
+                {% endif %}
                 <div class="mt-3 review-btn">{{ form_widget(review_form.submit, { 'attr': {'class': 'btn btn-danger mt-1', 'id': 'review-btn'} }) }}</div>
                 {{ form_end(review_form, {'render_rest': false}) }}
                 {% for message in app.flashes('notice') %}

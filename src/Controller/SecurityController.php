@@ -21,13 +21,18 @@ class SecurityController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
         $error = $authenticationUtils->getLastAuthenticationError();
 
+        if ($error) {
+            $customErrorMessage = match ($error->getMessageKey()) {
+                'Username could not be found.' => 'Nom d\'utilisateur invalide.',
+                'Invalid credentials.' => 'Identifiants invalides.',
+                default => 'Erreur de connexion. Veuillez réessayer ultérieurement.',
+            };
+            $this->addFlash('error', $customErrorMessage);
+        }
+
         $form = $this->createForm(LoginType::class);
 
         $form->handleRequest($request);
-
-        if ($error) {
-            $this->addFlash('error', $error->getMessageKey());
-        }
 
         return $this->render('security/login.html.twig', [
             'last_username' => $lastUsername,

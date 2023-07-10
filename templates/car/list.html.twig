@@ -102,7 +102,7 @@
                                 {% if car.brand %}
                                     <h2 class="card-title text-center">{{ car.brand ~ " " ~ car.model }}</h2>
                                 {% endif %}
-                                <p class="card-text text-center">{{ car.year }}</p>
+                                <p class="card-text text-center">{{ car.year ~ " - " ~ car.mileage|number_format(0, ',', ' ') ~ " " ~ "km"}}</p>
                                 <p class="card-text text-center car-price">{{ car.price|number_format(0, ',', ' ') }} €</p>
                                 <div class="d-flex justify-content-center">
                                     <a href="{{ path('voiture_detail', {id: car.id}) }}"

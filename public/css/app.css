@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Rajdhani:wght@600&display=swap');
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Barlow', sans-serif;
+}
+
+.nav-link {
+    font-family: 'Rajdhani', sans-serif;
+}
+
 .navbar,
 .offcanvas-end {
     background-color: #262526;
@@ -26,42 +40,39 @@
 }
 
 .navConnection:visited {
-    color: #D92332;
+    color: #DC3545;
 }
 
 .navConnection {
-    color: #D92332;
+    color: #DC3545;
 }
 
 .navConnection:hover {
-    color: #D92332;
+    color: #DC3545;
     text-decoration: underline;
 }
 
 .navConnection:focus {
-    color: #D92332;
+    color: #DC3545;
     text-decoration: underline;
 }
 
-.bg-danger {
-    color: #D92332;
-    background-color: #D92332;
+.navbar-toggler {
+    background-color: #DC3545;
 }
 
 a {
     color: #D94350;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 footer {
     background-color: #262526;
     color: #D9777F;
     margin-top: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Rajdhani', sans-serif;
 }
 
 h1 {
@@ -217,6 +228,11 @@ h3 {
 
 #login-btn {
     width: 25em;
+}
+
+.required:after {
+    content: " *";
+    color: #D92332;
 }
 
 @media (min-width: 992px) {
