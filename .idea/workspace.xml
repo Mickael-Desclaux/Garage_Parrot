@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="edit routes.yaml">
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Add symfony apache-pack">
+      <change afterPath="$PROJECT_DIR$/info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +50,7 @@
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -268,7 +267,7 @@
       <workItem from="1689003351323" duration="6334000" />
       <workItem from="1689013108265" duration="725000" />
       <workItem from="1689013852372" duration="2460000" />
-      <workItem from="1689055863677" duration="12858000" />
+      <workItem from="1689055863677" duration="13174000" />
     </task>
     <task id="LOCAL-00001" summary="Add new vendor paths, update settings, adjust margins and modify app fixtures.">
       <option name="closed" value="true" />
@@ -534,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689068432425</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Add symfony apache-pack">
+      <option name="closed" value="true" />
+      <created>1689069289279</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1689069289279</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +562,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add Admin Commmand and manage navbar responsiveness" />
     <MESSAGE value="Edit pages design and login form" />
     <MESSAGE value="Edit forms validations and handle error pages" />
     <MESSAGE value="Enhanced overall usability and aesthetics of the website." />
@@ -580,7 +586,8 @@
     <MESSAGE value="Fixing routes test" />
     <MESSAGE value="edit routes.yaml and url settings" />
     <MESSAGE value="edit routes.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit routes.yaml" />
+    <MESSAGE value="Add symfony apache-pack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add symfony apache-pack" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
