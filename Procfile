@@ -1,1 +1,1 @@
-web: symfony server:start /web
+web: heroku-php-apache2 public/
