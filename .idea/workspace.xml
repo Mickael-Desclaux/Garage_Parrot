@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Fix contact route">
-      <change afterPath="$PROJECT_DIR$/public/images/home/content/vidange.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/home/services/révision auto.jpg" afterDir="false" />
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Edit font-size for better responsiveness">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car/list.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +286,7 @@
       <workItem from="1689003351323" duration="6334000" />
       <workItem from="1689013108265" duration="725000" />
       <workItem from="1689013852372" duration="2460000" />
-      <workItem from="1689055863677" duration="19589000" />
+      <workItem from="1689055863677" duration="29048000" />
     </task>
     <task id="LOCAL-00001" summary="Add new vendor paths, update settings, adjust margins and modify app fixtures.">
       <option name="closed" value="true" />
@@ -579,7 +576,39 @@
       <option name="project" value="LOCAL" />
       <updated>1689071398725</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Design Optimization">
+      <option name="closed" value="true" />
+      <created>1689078430154</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1689078430154</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Set APP_ENV to prod">
+      <option name="closed" value="true" />
+      <created>1689078536366</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1689078536367</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Review page design optimization">
+      <option name="closed" value="true" />
+      <created>1689078806884</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1689078806884</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Edit font-size for better responsiveness">
+      <option name="closed" value="true" />
+      <created>1689085077634</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1689085077634</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,10 +629,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Enhanced overall usability and aesthetics of the website." />
-    <MESSAGE value="Azure commit" />
-    <MESSAGE value="Change environment setting from dev to prod." />
-    <MESSAGE value="add fly.yml file for deployment" />
     <MESSAGE value="add Workflow" />
     <MESSAGE value="Remove fly.yml" />
     <MESSAGE value="Improve code readability and formatting" />
@@ -625,7 +650,11 @@
     <MESSAGE value="Add symfony apache-pack" />
     <MESSAGE value="test phpinfo()" />
     <MESSAGE value="Fix contact route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix contact route" />
+    <MESSAGE value="Design Optimization" />
+    <MESSAGE value="Set APP_ENV to prod" />
+    <MESSAGE value="Review page design optimization" />
+    <MESSAGE value="Edit font-size for better responsiveness" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit font-size for better responsiveness" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

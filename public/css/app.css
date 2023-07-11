@@ -34,6 +34,10 @@ body {
     width: 10em;
 }
 
+.nav-link {
+    font-size: 1.2vmax;
+}
+
 .nav-link,
 .offcanvas-title {
     color: #f2f2f2;
@@ -80,10 +84,6 @@ footer {
     margin-top: auto;
 }
 
-.nav-item > .nav-link {
-    font-size: 1.7em;
-}
-
 h1, h2, h3 {
     font-family: 'Rajdhani', sans-serif;
 }
@@ -124,16 +124,13 @@ h5 {
     margin-top: 0.3em;
 }
 
-.form-group {
-    width: 13.5em;
-}
-
 #car-detail-btn {
     width: 10em;
 }
 
 .form-group > label {
     color: #f2f2f2;
+    margin-left: 0.7em;
 }
 
 .form-control {
@@ -141,8 +138,12 @@ h5 {
 }
 
 #car_filter_brand, #car_filter_energy, #car_filter_gearbox, #car_filter_doors {
-    margin-left: 0.75em;
-    width: 87%;
+    margin-left: 1em;
+    width: 86%;
+}
+
+#car_filter_price, #car_filter_year, #car_filter_mileage, #car_filter_horsepower {
+    width: 90%;
 }
 
 .filter-btn {
@@ -276,15 +277,8 @@ h5 {
         color: #262526;
     }
 
-    .form-group .form-control,
-    .form-choice {
-        width: 13.5em;
-    }
-
     #form-display {
         background-color: #f2f2f2;
-        padding: 1em;
-        border-radius: 1em;
     }
 
     .form-control {
@@ -301,6 +295,26 @@ h5 {
 }
 
 @media (max-width: 991px) {
+
+    #car_filter_brand, #car_filter_energy, #car_filter_gearbox, #car_filter_doors {
+        margin-left: 0;
+        width: 86%;
+    }
+
+    .btn-danger {
+        font-size: 1.8vmax;
+    }
+
+    .navbar-toggler {
+        font-size: 1.8vmax;
+    }
+
+    .hours-title {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
     .table-media {
         display: flex;
         justify-content: center;
@@ -333,13 +347,13 @@ h5 {
         text-align: center;
     }
 
+    label {
+        font-size: 1.8vmax;
+    }
+
     #car_filter_price, #car_filter_year, #car_filter_mileage, #car_filter_horsepower {
         background-color: #262526;
         border: none;
-    }
-
-    #car_filter_brand, #car_filter_energy, #car_filter_gearbox, #car_filter_doors {
-        margin-left: 0.75em;
     }
 
     body {
@@ -349,6 +363,20 @@ h5 {
     .nav-item {
         font-size: 1.7em;
     }
+
+    .form-control {
+        font-size: 1.8vmax;
+    }
+
+    .filter-btn {
+        margin-top: 1vmax;
+    }
+
+    .nav-link {
+        font-size: 1.8vmax;
+    }
+
+;
 }
 
 @media (max-width: 500px) {
