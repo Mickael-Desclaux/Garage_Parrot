@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Edit font-size for better responsiveness">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Switching to prod env">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/car/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car/list.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +283,7 @@
       <workItem from="1689003351323" duration="6334000" />
       <workItem from="1689013108265" duration="725000" />
       <workItem from="1689013852372" duration="2460000" />
-      <workItem from="1689055863677" duration="29048000" />
+      <workItem from="1689055863677" duration="30197000" />
     </task>
     <task id="LOCAL-00001" summary="Add new vendor paths, update settings, adjust margins and modify app fixtures.">
       <option name="closed" value="true" />
@@ -608,7 +605,23 @@
       <option name="project" value="LOCAL" />
       <updated>1689085077634</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Fixing responsive issues">
+      <option name="closed" value="true" />
+      <created>1689091076195</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1689091076195</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Switching to prod env">
+      <option name="closed" value="true" />
+      <created>1689091139399</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1689091139399</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,8 +642,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add Workflow" />
-    <MESSAGE value="Remove fly.yml" />
     <MESSAGE value="Improve code readability and formatting" />
     <MESSAGE value="Add Procfile for Heroku deployment" />
     <MESSAGE value="Edit Procfile" />
@@ -654,7 +665,9 @@
     <MESSAGE value="Set APP_ENV to prod" />
     <MESSAGE value="Review page design optimization" />
     <MESSAGE value="Edit font-size for better responsiveness" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit font-size for better responsiveness" />
+    <MESSAGE value="Fixing responsive issues" />
+    <MESSAGE value="Switching to prod env" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switching to prod env" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
