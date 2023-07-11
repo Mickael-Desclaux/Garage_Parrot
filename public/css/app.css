@@ -6,6 +6,15 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Barlow', sans-serif;
+    font-size: 1vmax;
+}
+
+.btn-danger {
+    font-size: 1vmax;
+}
+
+.navbar-nav, .offcanvas-title {
+    font-size: 0.8vmax;
 }
 
 .nav-link {
@@ -71,12 +80,20 @@ footer {
     margin-top: auto;
 }
 
+.nav-item > .nav-link {
+    font-size: 1.7em;
+}
+
 h1, h2, h3 {
     font-family: 'Rajdhani', sans-serif;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.3em;
+}
+
+h2 {
+    font-size: 2em;
 }
 
 h1,
@@ -86,7 +103,15 @@ h2 {
 
 h3 {
     color: #262526;
-    font-size: large;
+    font-size: larger;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+#offcanvasNavbarLabel {
+    font-size: 1em;
 }
 
 #hours-title {
@@ -315,6 +340,14 @@ h3 {
 
     #car_filter_brand, #car_filter_energy, #car_filter_gearbox, #car_filter_doors {
         margin-left: 0.75em;
+    }
+
+    body {
+        font-size: 1.8vmax;
+    }
+
+    .nav-item {
+        font-size: 1.7em;
     }
 }
 
