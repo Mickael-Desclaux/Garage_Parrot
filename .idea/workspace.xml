@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="add fly.yml file for deployment">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Edit connection string">
+      <change afterPath="$PROJECT_DIR$/public/images/home/content/freins auto.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/07/c8/9cc807" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/0e/16/f4160e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/2e/16/aa162e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/47/9b/269b47" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/52/2c/3e2c52" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/63/f7/c9f763" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/7b/bd/9abd7b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/ae/6c/8a6cae" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c0/40/8940c0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/da/28/e228da" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/df/e4/2de4df" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/fb/71/7671fb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Garage_Parrot-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Garage_Parrot-main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,32 +52,18 @@
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -223,24 +217,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;test&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mickaël/Desktop/STUDI/Code/1. Évaluations/ECF Finale/Garage_Parrot&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Mickaël/Desktop/STUDI/Code/1. Évaluations/ECF Finale/Garage_Parrot",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "web.server",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -268,7 +262,10 @@
       <workItem from="1688981427563" duration="10143000" />
       <workItem from="1688994353387" duration="6026000" />
       <workItem from="1689003223816" duration="120000" />
-      <workItem from="1689003351323" duration="3012000" />
+      <workItem from="1689003351323" duration="6334000" />
+      <workItem from="1689013108265" duration="725000" />
+      <workItem from="1689013852372" duration="2460000" />
+      <workItem from="1689055863677" duration="8065000" />
     </task>
     <task id="LOCAL-00001" summary="Add new vendor paths, update settings, adjust margins and modify app fixtures.">
       <option name="closed" value="true" />
@@ -342,7 +339,119 @@
       <option name="project" value="LOCAL" />
       <updated>1689002531812</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add Workflow">
+      <option name="closed" value="true" />
+      <created>1689008645815</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689008645815</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add Workflow">
+      <option name="closed" value="true" />
+      <created>1689008683691</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689008683691</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Remove fly.yml">
+      <option name="closed" value="true" />
+      <created>1689013992120</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1689013992120</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Improve code readability and formatting">
+      <option name="closed" value="true" />
+      <created>1689014230072</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689014230072</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add Procfile for Heroku deployment">
+      <option name="closed" value="true" />
+      <created>1689014892014</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689014892014</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Edit Procfile">
+      <option name="closed" value="true" />
+      <created>1689056066385</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1689056066385</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Edit Procfile">
+      <option name="closed" value="true" />
+      <created>1689057065503</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1689057065503</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Edit Procfile">
+      <option name="closed" value="true" />
+      <created>1689057826028</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689057826028</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Edit Procfile">
+      <option name="closed" value="true" />
+      <created>1689058094395</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689058094395</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Edit Procfile">
+      <option name="closed" value="true" />
+      <created>1689058279590</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1689058279590</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Update database connection in .env">
+      <option name="closed" value="true" />
+      <created>1689059183454</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1689059183454</updated>
+    </task>
+    <task id="LOCAL-00021" summary="New SQL connection">
+      <option name="closed" value="true" />
+      <created>1689061608368</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1689061608369</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Switch to prod env">
+      <option name="closed" value="true" />
+      <created>1689061687394</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1689061687394</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Edit connection string">
+      <option name="closed" value="true" />
+      <created>1689061928492</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689061928492</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +482,16 @@
     <MESSAGE value="Azure commit" />
     <MESSAGE value="Change environment setting from dev to prod." />
     <MESSAGE value="add fly.yml file for deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fly.yml file for deployment" />
+    <MESSAGE value="add Workflow" />
+    <MESSAGE value="Remove fly.yml" />
+    <MESSAGE value="Improve code readability and formatting" />
+    <MESSAGE value="Add Procfile for Heroku deployment" />
+    <MESSAGE value="Edit Procfile" />
+    <MESSAGE value="Update database connection in .env" />
+    <MESSAGE value="New SQL connection" />
+    <MESSAGE value="Switch to prod env" />
+    <MESSAGE value="Edit connection string" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit connection string" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
