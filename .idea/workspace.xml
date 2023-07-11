@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Fixing routes test">
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="edit routes.yaml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +51,17 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -202,6 +209,7 @@
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/requirements-checker" />
       <path value="$PROJECT_DIR$/vendor/heroku/heroku-buildpack-php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
     </include_path>
   </component>
   <component name="ProjectId" id="2Rc6hCYG4xeu1UwxCaNX14WzGwO" />
@@ -260,7 +268,7 @@
       <workItem from="1689003351323" duration="6334000" />
       <workItem from="1689013108265" duration="725000" />
       <workItem from="1689013852372" duration="2460000" />
-      <workItem from="1689055863677" duration="11731000" />
+      <workItem from="1689055863677" duration="12858000" />
     </task>
     <task id="LOCAL-00001" summary="Add new vendor paths, update settings, adjust margins and modify app fixtures.">
       <option name="closed" value="true" />
@@ -510,7 +518,23 @@
       <option name="project" value="LOCAL" />
       <updated>1689067434101</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="edit routes.yaml and url settings">
+      <option name="closed" value="true" />
+      <created>1689067981349</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1689067981349</updated>
+    </task>
+    <task id="LOCAL-00033" summary="edit routes.yaml">
+      <option name="closed" value="true" />
+      <created>1689068432425</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1689068432425</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,8 +555,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improve code readability and adjust content layout&#10;&#10;.&quot;" />
-    <MESSAGE value="Modified nav-link pseudo-classes" />
     <MESSAGE value="Add Admin Commmand and manage navbar responsiveness" />
     <MESSAGE value="Edit pages design and login form" />
     <MESSAGE value="Edit forms validations and handle error pages" />
@@ -556,7 +578,9 @@
     <MESSAGE value="Fixed img src for HomeContent image" />
     <MESSAGE value="Fixed img src for HomeContent image (with /)" />
     <MESSAGE value="Fixing routes test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing routes test" />
+    <MESSAGE value="edit routes.yaml and url settings" />
+    <MESSAGE value="edit routes.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit routes.yaml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
