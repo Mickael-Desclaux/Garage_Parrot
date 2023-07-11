@@ -21,31 +21,33 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-lg-8 offset-lg-2 mt-5">
-                <section>
-                    <h2 class="mb-4">Nos Prestations</h2>
-                    <div class="d-flex justify-content-center flex-wrap text-center">
-                        {% for home_services in services %}
-                            <div class="card me-2 mb-5 services-card" style="max-width: 15em;">
-                                {% if home_services.image %}
-                                    <img src="{{ asset('images/home/services/' ~ home_services.image) }}"
-                                         alt="{{ home_services.image }}" class="services-card-img">
-                                {% endif %}
-                                <div class="card-body">
-                                    <h3>{{ home_services.title }}</h3>
-                                    <p class="card-text">{{ home_services.content }}</p>
+        {% if services is not empty %}
+            <div class="row mt-4">
+                <div class="col-lg-8 offset-lg-2 mt-5">
+                    <section>
+                        <h2 class="mb-4 d-flex justify-content-center">Nos Prestations</h2><br>
+                        <div class="d-flex justify-content-center flex-wrap text-center">
+                            {% for home_services in services %}
+                                <div class="card me-1 ms-1 mb-5 services-card" style="max-width: 15em;">
+                                    {% if home_services.image %}
+                                        <img src="{{ asset('images/home/services/' ~ home_services.image) }}"
+                                             alt="{{ home_services.image }}" class="services-card-img">
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h3>{{ home_services.title }}</h3>
+                                        <p class="card-text">{{ home_services.content }}</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p>À partir de
+                                            <span class="services-price">{{ home_services.price }}€</span></p>
+                                    </div>
                                 </div>
-                                <div class="card-footer">
-                                    <p>À partir de
-                                        <span class="services-price">{{ home_services.price }}€</span></p>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </section>
+                            {% endfor %}
+                        </div>
+                    </section>
+                </div>
             </div>
-        </div>
+        {% endif %}
         <section>
             <div class="container-fluid">
                 <div class="row">

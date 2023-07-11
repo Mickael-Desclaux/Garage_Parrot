@@ -68,8 +68,12 @@ class CarController extends AbstractController
             ];
         }
 
+        $totalCars = count($cars);
+
+
         return new JsonResponse([
             'car' => $carData,
+            'total_cars' => $totalCars
         ]);
     }
 

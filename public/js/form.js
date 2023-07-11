@@ -7,6 +7,10 @@ function loadPage() {
         data: formData,
         dataType: 'json',
         success: function (response) {
+
+            // Mettre à jour le nombre total de voitures
+            $('#total-car').text(response.total_cars + ' Annonces Auto');
+
             const carList = $('#car-list');
             carList.empty();
 
