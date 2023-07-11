@@ -16,7 +16,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class CarController extends AbstractController
 {
-    #[Route('/nos_voitures', name: 'car_list')]
+    #[Route('/nos_voitures', name: 'nos_voitures')]
     public function carList(CarRepository $carRepository, Request $request): Response
     {
         $form = $this->createForm(CarFilterType::class);

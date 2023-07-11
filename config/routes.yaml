@@ -8,3 +8,7 @@ filtered_cars:
     path: /filtered_cars
     controller: App\Controller\CarController::filteredCars
     methods: [POST]
+
+nos_voitures:
+    path: /nos_voitures
+    controller: App\Controller\CarController::nos
