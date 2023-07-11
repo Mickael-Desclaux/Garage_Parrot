@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Edit connection string">
-      <change afterPath="$PROJECT_DIR$/public/images/home/content/freins auto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/07/c8/9cc807" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/0e/16/f4160e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/2e/16/aa162e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/47/9b/269b47" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/52/2c/3e2c52" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/63/f7/c9f763" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/7b/bd/9abd7b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/ae/6c/8a6cae" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/c0/40/8940c0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/da/28/e228da" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/df/e4/2de4df" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/cache/dev/profiler/fb/71/7671fb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Add Heroku buildpack to composer.json">
+      <change beforePath="$PROJECT_DIR$/.idea/Garage_Parrot-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Garage_Parrot-main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
@@ -60,6 +48,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -207,6 +198,7 @@
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/requirements-checker" />
+      <path value="$PROJECT_DIR$/vendor/heroku/heroku-buildpack-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="2Rc6hCYG4xeu1UwxCaNX14WzGwO" />
@@ -265,7 +257,7 @@
       <workItem from="1689003351323" duration="6334000" />
       <workItem from="1689013108265" duration="725000" />
       <workItem from="1689013852372" duration="2460000" />
-      <workItem from="1689055863677" duration="8065000" />
+      <workItem from="1689055863677" duration="9795000" />
     </task>
     <task id="LOCAL-00001" summary="Add new vendor paths, update settings, adjust margins and modify app fixtures.">
       <option name="closed" value="true" />
@@ -451,7 +443,39 @@
       <option name="project" value="LOCAL" />
       <updated>1689061928492</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Edit connection string">
+      <option name="closed" value="true" />
+      <created>1689064207158</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689064207158</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add symfony/intl package">
+      <option name="closed" value="true" />
+      <created>1689064729406</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689064729406</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add ext-intl to composer.json">
+      <option name="closed" value="true" />
+      <created>1689065207012</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1689065207012</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add Heroku buildpack to composer.json">
+      <option name="closed" value="true" />
+      <created>1689065652571</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1689065652571</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +515,10 @@
     <MESSAGE value="New SQL connection" />
     <MESSAGE value="Switch to prod env" />
     <MESSAGE value="Edit connection string" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit connection string" />
+    <MESSAGE value="add symfony/intl package" />
+    <MESSAGE value="add ext-intl to composer.json" />
+    <MESSAGE value="Add Heroku buildpack to composer.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Heroku buildpack to composer.json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
