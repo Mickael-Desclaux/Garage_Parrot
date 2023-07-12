@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'garagevparrot'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0535E3430BC442AEA767EEEE1CD3BB22 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A91BB95661764927A793BF3BD2F17637 }}
           package: .
