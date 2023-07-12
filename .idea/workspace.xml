@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Edit HtaAccess">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Switching to prod database">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -677,7 +677,23 @@
       <option name="project" value="LOCAL" />
       <updated>1689175963070</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Switch .env to prod">
+      <option name="closed" value="true" />
+      <created>1689176150431</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1689176150431</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Switching to prod database">
+      <option name="closed" value="true" />
+      <created>1689178376241</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1689178376241</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,8 +714,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add Procfile for Heroku deployment" />
-    <MESSAGE value="Edit Procfile" />
     <MESSAGE value="Update database connection in .env" />
     <MESSAGE value="New SQL connection" />
     <MESSAGE value="Switch to prod env" />
@@ -723,7 +737,9 @@
     <MESSAGE value="Fixing responsive issues" />
     <MESSAGE value="Switching to prod env" />
     <MESSAGE value="Edit HtaAccess" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit HtaAccess" />
+    <MESSAGE value="Switch .env to prod" />
+    <MESSAGE value="Switching to prod database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Switching to prod database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
