@@ -46,7 +46,7 @@ class Car
     #[ORM\JoinColumn(name: "user_id", referencedColumnName: "id")]
     private $user;
 
-    #[ORM\OneToMany(mappedBy: 'car', targetEntity: CarImage::class, orphanRemoval: true, cascade: ['persist'])]
+    #[ORM\OneToMany(mappedBy: 'car', targetEntity: CarImage::class, cascade: ['persist'], orphanRemoval: true)]
     private Collection $carImages;
 
     public function __construct()

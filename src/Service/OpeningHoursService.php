@@ -7,18 +7,16 @@ use Doctrine\Persistence\ManagerRegistry;
 
 class OpeningHoursService
 {
-    private $doctrine;
+    private ManagerRegistry $doctrine;
 
     public function __construct(ManagerRegistry $doctrine)
     {
         $this->doctrine = $doctrine;
     }
 
-    public function getOpeningHours()
+    public function getOpeningHours(): array
     {
         $repository = $this->doctrine->getRepository(OpeningHours::class);
-        $opening = $repository->findAll();
-
-        return $opening;
+        return $repository->findAll();
     }
 }

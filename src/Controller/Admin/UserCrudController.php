@@ -41,7 +41,7 @@ class UserCrudController extends AbstractCrudController implements EventSubscrib
         ];
     }
 
-    public function hashPassword(BeforeEntityPersistedEvent $event)
+    public function hashPassword(BeforeEntityPersistedEvent $event): void
     {
         $entity = $event->getEntityInstance();
 

@@ -23,7 +23,7 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {        
          $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
-         return $this->redirect($adminUrlGenerator->setController(CarCrudController::class)->generateUrl());
+         return $this->redirect($adminUrlGenerator->setController(ContactCrudController::class)->generateUrl());
     }
 
     public function configureDashboard(): Dashboard
@@ -38,9 +38,9 @@ class DashboardController extends AbstractDashboardController
 
         if ($this->isGranted('ROLE_ADMIN')) {
         yield MenuItem::linkToCrud('Page d\'accueil', 'fa fa-list', HomeContent::class)->setPermission('ROLE_ADMIN');
-        yield MenuItem::linkToCrud('Prestations', 'fas fa-screwdriver-wrench', HomeServices::class);
-        yield MenuItem::linkToCrud('Horaires', 'fas fa-clock', OpeningHours::class);
-        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
+        yield MenuItem::linkToCrud('Prestations', 'fas fa-screwdriver-wrench', HomeServices::class)->setPermission('ROLE_ADMIN');
+        yield MenuItem::linkToCrud('Horaires', 'fas fa-clock', OpeningHours::class)->setPermission('ROLE_ADMIN');
+        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class)->setPermission('ROLE_ADMIN');
         }
         
         yield MenuItem::linkToCrud('Voitures', 'fas fa-car-side', Car::class);

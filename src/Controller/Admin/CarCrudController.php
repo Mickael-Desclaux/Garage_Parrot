@@ -17,7 +17,7 @@ class CarCrudController extends AbstractCrudController
         return Car::class;
     }
 
-    public function createEntity(string $entityFqcn)
+    public function createEntity(string $entityFqcn): Car
     {
         $car = new Car();
         $car->setUser($this->getUser());
