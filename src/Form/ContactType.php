@@ -19,10 +19,7 @@ class ContactType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-
-
         $builder
-
             ->add(
                 'subject',
                 TextType::class,
@@ -32,10 +29,7 @@ class ContactType extends AbstractType
                     "constraints" => [
                         new NotBlank(["message" => "Veuillez renseigner le sujet de votre message"]),
                         new Length(["max" => 50, "maxMessage" => "Le sujet de votre message doit faire moins de 50 caractères"])
-                        ]
-                ]
-            )
-
+                    ]])
             ->add(
                 'firstname',
                 TextType::class,
@@ -45,10 +39,7 @@ class ContactType extends AbstractType
                     "constraints" => [
                         new NotBlank(["message" => "Veuillez renseigner votre prénom"]),
                         new Length(["max" => 50, "maxMessage" => "Votre prénom doit faire moins de 50 caractères"])
-                    ]
-                ]
-            )
-
+                    ]])
             ->add(
                 'lastname',
                 TextType::class,
@@ -58,10 +49,7 @@ class ContactType extends AbstractType
                     "constraints" => [
                         new NotBlank(["message" => "Veuillez renseigner votre nom"]),
                         new Length(["max" => 50, "maxMessage" => "Votre nom doit faire moins de 50 caractères"])
-                    ]
-                ]
-            )
-
+                    ]])
             ->add(
                 'phone',
                 TelType::class,
@@ -74,10 +62,7 @@ class ContactType extends AbstractType
                             'pattern' => '/^((\+|00)33\s?|0)[1-9](\s?\d{2}){4}$/',
                             'message' => 'Le numéro de téléphone est invalide',
                         ]),
-                    ]
-                ]
-            )
-
+                    ]])
             ->add(
                 'email',
                 EmailType::class,
@@ -86,10 +71,7 @@ class ContactType extends AbstractType
                     "required" => true,
                     "constraints" => [
                         new NotBlank(["message" => "Veuillez renseigner une adresse mail"])
-                    ]
-                ]
-            )
-
+                    ]])
             ->add(
                 'message',
                 TextareaType::class,
@@ -99,10 +81,7 @@ class ContactType extends AbstractType
                     "constraints" => [
                         new NotBlank(["message" => "Veuillez renseigner un message"]),
                         new Length(["max" => 1000, "maxMessage" => "Veuillez renseigner un message de moins de 1000 caractères"])
-                    ]
-                ]
-            )
-
+                    ]])
             ->add('submit', SubmitType::class, [
                 'label' => 'Envoyer',
                 'attr' => ['class' => 'btn btn-danger']

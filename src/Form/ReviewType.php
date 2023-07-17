@@ -27,9 +27,7 @@ class ReviewType extends AbstractType
                     "constraints" => [
                         new NotBlank(["message" => "Veuillez renseigner votre nom"]),
                         new Length(["max" => 50, "maxMessage" => "Votre nom doit comporter moins de 50 caractères"]),
-                    ]
-                ]
-            )
+                    ]])
             ->add(
                 'comment',
                 TextareaType::class,
@@ -38,9 +36,7 @@ class ReviewType extends AbstractType
                     "required" => false,
                     "constraints" => [
                         new Length(["max" => 2000, "maxMessage" => "Votre commentaire doit comporter moins de 2000 caractères"])
-                    ]
-                ]
-            )
+                    ]])
             ->add(
                 'note',
                 IntegerType::class,
@@ -48,9 +44,7 @@ class ReviewType extends AbstractType
                     "required" => true,
                     "constraints" => [
                         new NotBlank(["message" => "Veuillez attribuer une note"])
-                    ]
-                ]
-            )
+                    ]])
             ->add('submit', SubmitType::class, [
                 'label' => 'Publier',
                 'attr' => ['class' => 'btn btn-danger']
