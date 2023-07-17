@@ -4,12 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Fixing routes.yaml">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Remove OpeningHoursController.php">
+      <change afterPath="$PROJECT_DIR$/public/images/cars/bmw-64b576fb6282b296177986.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/bmw-interieur-64b576fb79185998642121.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/clio-3-arriere-64b56ea75b7b8469636829.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/clio-3-interieur-64b56ea7438ad629606172.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-64b57060a94b1724396755.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-64b5706b0ff45924949558.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-64b5707172bd1283586391.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-64b5751e8e904315884661.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-arriere-64b57046cdbf4672815424.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-arriere-64b5706b26b83037567072.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-interieur-64b57046b7720847941626.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-interieur-64b57060bfc8e456485093.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-interieur-64b5751ea75d1797402284.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-panda-inetrieur-64b575f802148747401043.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/fiat-panda2-64b575f7dfb69392110204.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/kia-interieur-64b5774fc249e763518460.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cars/kia-picanto-64b5774fab905603269004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/home/services/batterie-voiture1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Garage_Parrot-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Garage_Parrot-main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/OpeningHoursController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ReviewType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ReviewType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/audi-a4-64a2c3ef954ba222753731.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/bmw-3-series-64a2c411b38d0828713831.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/chevrolet-cruze-64a2c4346f4a5001995206.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/chevrolet-cruze-64a3c0e0493d1292862920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/citroen-c3-64a2c4507f23f543588255.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/clio-3-64a2c46fa608a907762969.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/cars/clio-3-64b56ea723188994625538.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/clio-3-64a3c29cd7bb9574825876.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/fiat-500-64a3c29cd8895749655672.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/cars/fiat-500-64b57046a101a001036728.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/fiat-panda-64a3c0e0430ba404608777.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/cars/ford-ka-64a2b762d65ae039765461.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/home/Capture d'écran 2023-06-20 080855.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/home/content/freins auto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/home/content/vidange.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/home/services/batterie-voiture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/home/services/diagnostic élec.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/home/services/freins auto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/home/services/révision auto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/CreateAdminCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CreateAdminCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +89,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
   </component>
@@ -212,9 +266,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/oneup/flysystem-bundle" />
-      <path value="$PROJECT_DIR$/vendor/cloudinary/transformation-builder-sdk" />
-      <path value="$PROJECT_DIR$/vendor/cloudinary/cloudinary_php" />
-      <path value="$PROJECT_DIR$/vendor/teapot/status-code" />
+      <path value="$PROJECT_DIR$/vendor/deployer/deployer" />
     </include_path>
   </component>
   <component name="ProjectId" id="2Rc6hCYG4xeu1UwxCaNX14WzGwO" />
@@ -228,6 +280,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -280,7 +333,8 @@
       <workItem from="1689013852372" duration="2460000" />
       <workItem from="1689055863677" duration="30197000" />
       <workItem from="1689313493987" duration="7913000" />
-      <workItem from="1689576949046" duration="2206000" />
+      <workItem from="1689576949046" duration="18503000" />
+      <workItem from="1689611313566" duration="2707000" />
     </task>
     <task id="LOCAL-00001" summary="Add new vendor paths, update settings, adjust margins and modify app fixtures.">
       <option name="closed" value="true" />
@@ -658,7 +712,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689313977256</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Remove OpeningHoursController.php">
+      <option name="closed" value="true" />
+      <created>1689579560121</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1689579560121</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +741,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Switch to prod env" />
     <MESSAGE value="Edit connection string" />
     <MESSAGE value="add symfony/intl package" />
     <MESSAGE value="add ext-intl to composer.json" />
@@ -704,7 +765,8 @@
     <MESSAGE value="Switching to prod database" />
     <MESSAGE value="Code refactor" />
     <MESSAGE value="Fixing routes.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing routes.yaml" />
+    <MESSAGE value="Remove OpeningHoursController.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove OpeningHoursController.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,8 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block extra_stylesheets %}
-    <header>
         <link rel="stylesheet" href="{{ asset('css/star-rating.css') }}">
-    </header>
 {% endblock %}
 {% block body %}
 
@@ -15,8 +13,6 @@
                         {% if HomeContent.image %}
                             <img src="{{ '/images/home/content/' ~ HomeContent.image }}" alt="HomeContent.image">
                         {% endif %}
-
-
                     </section>
                 {% endfor %}
             </div>

@@ -13,12 +13,9 @@ body {
     font-size: 1vmax;
 }
 
-.navbar-nav, .offcanvas-title {
-    font-size: 0.8vmax;
-}
-
 .nav-link {
     font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2vmax;
 }
 
 .navbar,
@@ -32,10 +29,6 @@ body {
 
 .brand_logo {
     width: 10em;
-}
-
-.nav-link {
-    font-size: 1.2vmax;
 }
 
 .nav-link,

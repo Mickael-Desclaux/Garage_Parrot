@@ -30,7 +30,7 @@ class CreateAdminCommand extends Command
     {
         $this
             ->setDescription('Creates a new admin user.')
-            ->setHelp('This command allows you to create an admin...')
+            ->setHelp('This command allows you to create an admin.')
             ->addArgument('email', InputArgument::REQUIRED, 'The email of the admin.')
             ->addArgument('password', InputArgument::REQUIRED, 'The password of the admin.');
     }
