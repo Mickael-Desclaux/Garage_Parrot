@@ -155,8 +155,8 @@ h5 {
     color: white;
     cursor: pointer;
     padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
+    border-radius: 0.5em;
+    font-size: 1vmax;
 }
 
 #myBtn:hover {
@@ -246,7 +246,7 @@ h5 {
 }
 
 #login-btn {
-    width: 25em;
+    width: 10em;
 }
 
 .required:after {
@@ -290,8 +290,8 @@ h5 {
 @media (max-width: 991px) {
 
     #car_filter_brand, #car_filter_energy, #car_filter_gearbox, #car_filter_doors {
-        margin-left: 0;
-        width: 86%;
+        margin-left: 0.5em;
+        width: 75%;
     }
 
     .btn-danger {
@@ -366,7 +366,7 @@ h5 {
     }
 
     .nav-link {
-        font-size: 1.8vmax;
+        font-size: 2vmax;
     }
 
     .car-card-title > h1 {
@@ -391,7 +391,18 @@ h5 {
         height: 100%;
     }
 
-;
+    #myBtn {
+        font-size: 1.5vmax;
+    }
+
+    #car_filter_reset, #car_filter_submit {
+        width: 75%;
+    }
+
+    form .offcanvas-body {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 500px) {
