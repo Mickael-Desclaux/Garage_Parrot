@@ -19,9 +19,9 @@ function loadPage() {
                 // Ajoute les informations de la voiture au HTML généré
                 html += `<img src="../images/cars/${car.image}" alt="${car.brand} ${car.model}"class="car-card-img"">`;
                 html += '<div class="card-body">';
-                html += '<h3 class="card-title text-center">' + car.brand + ' ' + car.model + '</h3>';
-                html += '<p class="card-text text-center">' + car.year + '</p>';
-                html += '<p class="card-text text-center">' + car.price + '€</p>';
+                html += '<h2 class="card-title text-center">' + car.brand + ' ' + car.model + '</h2>';
+                html += '<p class="card-text text-center">' + car.year + ' - ' + car.mileage + ' km' + '</p>';
+                html += '<p class="card-text text-center car-price">' + car.price + '€</p>';
                 html += '<div class="d-flex justify-content-center">';
                 html += '<a href="' + car.detailLink + '" class="btn btn-danger stretched-link d-flex justify-content-center" id="car-detail-btn">Détails</a>';
                 html += '</div>';
