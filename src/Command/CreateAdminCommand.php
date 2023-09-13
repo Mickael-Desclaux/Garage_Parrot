@@ -1,6 +1,5 @@
 <?php
 
-// src/Command/CreateAdminCommand.php
 namespace App\Command;
 
 use App\Entity\User;

@@ -22,7 +22,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $email = null;
 
     #[ORM\Column]
-    private array $roles = [];
+    private array $roles;
 
     /**
      * @var string The hashed password
@@ -44,7 +44,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         pattern: "/[0-9]/",
         message: "Le mot de passe doit contenir au moins un chiffre"
     )]
-    private ?string $password = null;
+    private string $password;
 
     #[ORM\OneToMany(mappedBy: "user", targetEntity: "App\Entity\Car")]
     private $car;
