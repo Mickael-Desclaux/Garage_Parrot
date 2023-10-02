@@ -11,9 +11,7 @@ services:
         autowire: true      # Automatically injects dependencies in your services.
         tags:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-    App\EventListener\RedirectToHttpsListener:
-        tags:
-            - { name: 'kernel.event_listener', event: 'kernel.request', method: 'onKernelRequest' }
+
     
     App\Twig\OpeningHoursExtension:
         autowire: true
