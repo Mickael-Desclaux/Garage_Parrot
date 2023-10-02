@@ -8,8 +8,3 @@ filtered_cars:
     path: /filtered_cars
     controller: App\Controller\CarController::filteredCars
     methods: [POST]
-
-admin:
-    path: /admin
-    controller: App\Controller\AdminController::index
-    schemes: [https]
