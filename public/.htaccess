@@ -29,7 +29,7 @@ DirectoryIndex index.php
 
     # ...or just a plain old http request directly from the client
     RewriteCond %{HTTP:X-Forwarded-Proto} =""
-    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTPS} !=off
 
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
