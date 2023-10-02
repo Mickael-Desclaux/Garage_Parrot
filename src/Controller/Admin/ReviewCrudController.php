@@ -3,6 +3,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Review;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
@@ -37,5 +40,10 @@ class ReviewCrudController extends AbstractCrudController
        ]);
        yield BooleanField::new('approved')->setLabel('Approuvé');
     }
-    
+
+    public function configureActions(Actions $actions): Actions
+    {
+        return $actions
+            ->remove(Crud::PAGE_EDIT, Action::EDIT);
+    }
 }
