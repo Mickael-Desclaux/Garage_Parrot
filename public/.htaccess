@@ -22,7 +22,7 @@ DirectoryIndex index.php
     # 'Options FollowSymLinks or SymLinksIfOwnerMatch is off which implies that RewriteRule directive is forbidden'
     Options +FollowSymlinks
 
-#    RewriteEngine On
+    RewriteEngine On
 #
 #    # If we receive a forwarded http request from a proxy...
 #    RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
