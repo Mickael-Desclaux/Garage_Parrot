@@ -29,9 +29,9 @@ DirectoryIndex index.php
 
     # ...or just a plain old http request directly from the client
     RewriteCond %{HTTP:X-Forwarded-Proto} =""
-    RewriteCond %{HTTPS} !=off
+    RewriteCond %{HTTPS} !=on
 
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=302]
 
 
     # Determine the RewriteBase automatically and set it as environment variable.
