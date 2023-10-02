@@ -24,14 +24,25 @@ DirectoryIndex index.php
 
     RewriteEngine On
 
-    # If we receive a forwarded http request from a proxy...
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+
+    # Ne pas rediriger si la méthode est POST
+    RewriteCond %{REQUEST_METHOD} !POST
+
+    # Si nous recevons une requête http transmise par un proxy...
     RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
 
-    # ...or just a plain old http request directly from the client
+    # ...ou simplement une requête http directe du client
     RewriteCond %{HTTP:X-Forwarded-Proto} =""
     RewriteCond %{HTTPS} !=on
 
+    # Rediriger vers la version https
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # ... le reste de votre configuration .htaccess ...
+
 
     # Determine the RewriteBase automatically and set it as environment variable.
     # If you are using Apache aliases to do mass virtual hosting or installed the
@@ -76,4 +87,5 @@ DirectoryIndex index.php
         RedirectMatch 307 ^/$ /index.php/
         # RedirectTemp cannot be used instead
     </IfModule>
+</IfModule>
 </IfModule>
