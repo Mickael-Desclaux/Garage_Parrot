@@ -40,10 +40,4 @@ class ReviewCrudController extends AbstractCrudController
        ]);
        yield BooleanField::new('approved')->setLabel('Approuvé');
     }
-
-    public function configureActions(Actions $actions): Actions
-    {
-        return $actions
-            ->remove(Crud::PAGE_EDIT, Action::EDIT);
-    }
 }
