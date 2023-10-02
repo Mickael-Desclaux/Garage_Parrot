@@ -4,6 +4,8 @@ framework:
     csrf_protection: true
     http_method_override: false
     handle_all_throwables: true
+    trusted_proxies: [ '0.0.0.0/0', '::/0' ] # Faites confiance à toutes les adresses IP
+    trusted_headers: [ 'X-Forwarded-Host', 'X-Forwarded-Port', 'X-Forwarded-Proto', 'X-Forwarded-For' ]
 
     # Enables session support. Note that the session will ONLY be started if you read or write from it.
     # Remove or comment this section to explicitly disable session support.
