@@ -24,6 +24,8 @@ DirectoryIndex index.php
 
     RewriteEngine On
 
+    # Skip the rewrite rule for /admin path
+    RewriteCond %{REQUEST_URI} !^/admin
     # If we receive a forwarded http request from a proxy...
     RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
 
