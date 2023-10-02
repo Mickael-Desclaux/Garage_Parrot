@@ -18,8 +18,7 @@
         </div>
         <div class="row d-flex justify-content-between">
             <h1 class="mt-1 col-lg-11 offset-md-1 col-md-5" id="total-car">
-                {{ total_cars }}
-                Annonces Auto
+                {{ total_cars }} Annonces Auto
             </h1>
             <div class="mt-4 col-lg-3 col-md-3">
                 <button class="navbar-toggler filter-toggle-btn" type="button" data-bs-toggle="offcanvas"
@@ -44,37 +43,30 @@
                                 {{ form_label(filter_form.price, 'Prix') }}
                                 {{ form_widget(filter_form.price, { 'attr': {'class': 'form-control'} }) }}
                             </div>
-
                             <div class="form-group mt-2">
                                 {{ form_label(filter_form.brand, 'Marque') }}
                                 {{ form_widget(filter_form.brand, { 'attr': {'class': 'form-choice'} }) }}
                             </div>
-
                             <div class="form-group mt-2">
                                 {{ form_label(filter_form.year, 'Année') }}
                                 {{ form_widget(filter_form.year, { 'attr': {'class': 'form-control'} }) }}
                             </div>
-
                             <div class="form-group mt-2">
                                 {{ form_label(filter_form.mileage, 'Kilométrage') }}
                                 {{ form_widget(filter_form.mileage, { 'attr': {'class': 'form-control'} }) }}
                             </div>
-
                             <div class="form-group mt-2">
                                 {{ form_label(filter_form.horsepower, 'Puissance') }}
                                 {{ form_widget(filter_form.horsepower, { 'attr': {'class': 'form-control'} }) }}
                             </div>
-
                             <div class="form-group mt-2">
                                 {{ form_label(filter_form.energy, 'Énergie') }}
                                 {{ form_widget(filter_form.energy, { 'attr': {'class': 'form-choice'} }) }}
                             </div>
-
                             <div class="form-group mt-2">
                                 {{ form_label(filter_form.gearbox, 'Boîte de vitesse') }}
                                 {{ form_widget(filter_form.gearbox, { 'attr': {'class': 'form-choice'} }) }}
                             </div>
-
                             <div class="form-group mt-2">
                                 {{ form_label(filter_form.doors, 'Nombre de portes') }}
                                 {{ form_widget(filter_form.doors, { 'attr': {'class': 'form-choice'} }) }}
@@ -102,8 +94,9 @@
                                 {% if car.brand %}
                                     <h2 class="card-title text-center">{{ car.brand ~ " " ~ car.model }}</h2>
                                 {% endif %}
-                                <p class="card-text text-center">{{ car.year ~ " - " ~ car.mileage|number_format(0, ',', ' ') ~ " " ~ "km"}}</p>
-                                <p class="card-text text-center car-price">{{ car.price|number_format(0, ',', ' ') }} €</p>
+                                <p class="card-text text-center">{{ car.year ~ " - " ~ car.mileage|number_format(0, ',', ' ') ~ " " ~ "km" }}</p>
+                                <p class="card-text text-center car-price">{{ car.price|number_format(0, ',', ' ') }}
+                                    €</p>
                                 <div class="d-flex justify-content-center">
                                     <a href="{{ path('voiture_detail', {id: car.id}) }}"
                                        class="btn btn-danger stretched-link d-flex justify-content-center"

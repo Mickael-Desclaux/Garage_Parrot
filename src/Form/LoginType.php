@@ -24,8 +24,8 @@ class LoginType extends AbstractType
                     "required" => true,
                     "block_name" => "_email",
                     "constraints" => [
-                        new Length (["min" => 2, "max" => 180, "minMessage" => "L'adresse mail doit comporter au moins 2 caractères", "maxMessage" =>
-                            "L'adresse mail ne doit pas faire plus de 180 caractères"]),
+                        new Length (["min" => 2, "max" => 180, "minMessage" => "L'adresse mail doit comporter au moins 2 caractères",
+                            "maxMessage" => "L'adresse mail ne doit pas faire plus de 180 caractères"]),
                         new NotBlank(["message" => "Veuillez renseigner une adresse mail"]),
                         new Email(['message' => 'Veuillez renseigner une adresse mail valide'])
                     ]])

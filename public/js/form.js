@@ -29,8 +29,6 @@ function loadPage() {
                 html += '</div>';
                 carList.append(html); // Ajoute le HTML de la voiture à la liste des voitures
             });
-
-
         },
         error: function (xhr, status, error) {
             console.error("Erreur AJAX : " + status + " - " + error);

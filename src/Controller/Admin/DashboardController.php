@@ -9,6 +9,8 @@ use App\Entity\Contact;
 use App\Entity\HomeContent;
 use App\Entity\HomeServices;
 use App\Entity\OpeningHours;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -18,6 +20,10 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 
 class DashboardController extends AbstractDashboardController
 {
+    /**
+     * @throws NotFoundExceptionInterface
+     * @throws ContainerExceptionInterface
+     */
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {        

@@ -12,8 +12,6 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class CreateAdminCommand extends Command
 {
-    protected static $defaultName = 'app:create-admin';
-
     private UserPasswordHasherInterface $passwordHasher;
     private EntityManagerInterface $entityManager;
 
@@ -21,8 +19,8 @@ class CreateAdminCommand extends Command
     {
         $this->passwordHasher = $passwordHasher;
         $this->entityManager = $entityManager;
-
         parent::__construct();
+        $this->setName('app:create-admin');
     }
 
     protected function configure(): void

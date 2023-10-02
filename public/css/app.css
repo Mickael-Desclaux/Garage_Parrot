@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Rajdhani:wght@600&display=swap');
 
-
 body {
     display: flex;
     flex-direction: column;
@@ -89,8 +88,7 @@ h2 {
     font-size: 2em;
 }
 
-h1,
-h2 {
+h1, h2 {
     color: #D92332;
 }
 
@@ -163,6 +161,11 @@ h5 {
     background-color: #262526;
 }
 
+.car-price {
+    font-weight: bold;
+    color: #D92332;
+}
+
 .car-card {
     width: 20em;
     height: 30em;
@@ -192,11 +195,6 @@ h5 {
 .table-label {
     font-weight: bold;
     padding-right: 8em;
-}
-
-.car-price {
-    font-weight: bold;
-    color: #D92332;
 }
 
 .table-media {

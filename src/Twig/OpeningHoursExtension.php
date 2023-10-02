@@ -28,8 +28,8 @@ class OpeningHoursExtension extends AbstractExtension
         return $this->openingHoursService->getOpeningHours();
     }
 
-    public function getFilters()
-{
+    public function getFilters(): array
+    {
     return [
         new TwigFilter('sort_days', [$this, 'sortDays']),
     ];

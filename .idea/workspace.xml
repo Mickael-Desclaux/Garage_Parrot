@@ -4,8 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Change carousel images aspect ratio on mobile">
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="edit htaccess">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Garage_Parrot-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Garage_Parrot-main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/topButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/topButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/CreateAdminCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CreateAdminCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/HomeServicesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/HomeServicesCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/LoginType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/LoginType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Twig/OpeningHoursExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Twig/OpeningHoursExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,39 +65,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="FORCE_HIGHLIGHTING" root1="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -242,6 +227,9 @@
       <path value="$PROJECT_DIR$/vendor/deployer/deployer" />
     </include_path>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2Rc6hCYG4xeu1UwxCaNX14WzGwO" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -259,14 +247,19 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mickaël/Desktop/STUDI/Code/1. Évaluations/ECF Finale/Garage_Parrot&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mickaël/Desktop/STUDI/Code/node&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -309,71 +302,57 @@
       <workItem from="1689576949046" duration="18503000" />
       <workItem from="1689611313566" duration="2852000" />
       <workItem from="1689662748522" duration="20939000" />
-      <workItem from="1689752545959" duration="6199000" />
-    </task>
-    <task id="LOCAL-00005" summary="Edit forms validations and handle error pages">
-      <option name="closed" value="true" />
-      <created>1688724728573</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1688724728573</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Enhanced overall usability and aesthetics of the website.">
-      <option name="closed" value="true" />
-      <created>1688989145841</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1688989145841</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Azure commit">
-      <option name="closed" value="true" />
-      <created>1688996473304</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1688996473304</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Change environment setting from dev to prod.">
-      <option name="closed" value="true" />
-      <created>1688997579018</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1688997579018</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add fly.yml file for deployment">
-      <option name="closed" value="true" />
-      <created>1689002531812</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1689002531812</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add Workflow">
-      <option name="closed" value="true" />
-      <created>1689008645815</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1689008645815</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add Workflow">
-      <option name="closed" value="true" />
-      <created>1689008683691</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1689008683691</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Remove fly.yml">
-      <option name="closed" value="true" />
-      <created>1689013992120</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1689013992120</updated>
+      <workItem from="1689752545959" duration="6336000" />
+      <workItem from="1689771191077" duration="327000" />
+      <workItem from="1689771531584" duration="532000" />
+      <workItem from="1689785518066" duration="210000" />
+      <workItem from="1689790355781" duration="211000" />
+      <workItem from="1689836313582" duration="19000" />
+      <workItem from="1690187560277" duration="2765000" />
+      <workItem from="1690275423459" duration="779000" />
+      <workItem from="1690279346673" duration="774000" />
+      <workItem from="1690375322754" duration="615000" />
+      <workItem from="1690795974121" duration="896000" />
+      <workItem from="1690882362438" duration="590000" />
+      <workItem from="1690966063180" duration="404000" />
+      <workItem from="1691399530199" duration="20000" />
+      <workItem from="1691399558108" duration="4000" />
+      <workItem from="1692695162813" duration="65000" />
+      <workItem from="1692697344097" duration="744000" />
+      <workItem from="1692775696321" duration="5093000" />
+      <workItem from="1692858666109" duration="7033000" />
+      <workItem from="1692948517912" duration="4720000" />
+      <workItem from="1693212006639" duration="1783000" />
+      <workItem from="1693293656431" duration="3361000" />
+      <workItem from="1693382181386" duration="1171000" />
+      <workItem from="1693385292014" duration="54000" />
+      <workItem from="1693385426015" duration="2884000" />
+      <workItem from="1693472920607" duration="697000" />
+      <workItem from="1693557993974" duration="664000" />
+      <workItem from="1693653466437" duration="5000" />
+      <workItem from="1693765026310" duration="94000" />
+      <workItem from="1693768890460" duration="1142000" />
+      <workItem from="1693811301092" duration="172000" />
+      <workItem from="1693819032001" duration="25000" />
+      <workItem from="1693831454844" duration="724000" />
+      <workItem from="1693899814585" duration="6391000" />
+      <workItem from="1694266644493" duration="1236000" />
+      <workItem from="1694348306289" duration="694000" />
+      <workItem from="1694416682169" duration="1760000" />
+      <workItem from="1694516638223" duration="7174000" />
+      <workItem from="1694605903674" duration="11598000" />
+      <workItem from="1694627555179" duration="2546000" />
+      <workItem from="1694670955485" duration="10086000" />
+      <workItem from="1695018601567" duration="7000" />
+      <workItem from="1695019604292" duration="605000" />
+      <workItem from="1695130725072" duration="934000" />
+      <workItem from="1695194723458" duration="1300000" />
+      <workItem from="1695716796587" duration="453000" />
+      <workItem from="1695967655104" duration="3959000" />
+      <workItem from="1695991304275" duration="592000" />
+      <workItem from="1695998019493" duration="137000" />
+      <workItem from="1696004862975" duration="20000" />
+      <workItem from="1696229875875" duration="3022000" />
     </task>
     <task id="LOCAL-00013" summary="Improve code readability and formatting">
       <option name="closed" value="true" />
@@ -703,7 +682,71 @@
       <option name="project" value="LOCAL" />
       <updated>1689770826419</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Change carousel images aspect ratio on mobile">
+      <option name="closed" value="true" />
+      <created>1689771084567</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1689771084567</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Edit gitIgnore">
+      <option name="closed" value="true" />
+      <created>1689771490370</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1689771490370</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Edit car-carousel-img css">
+      <option name="closed" value="true" />
+      <created>1689771730385</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1689771730386</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Clean-up code and enhance application security">
+      <option name="closed" value="true" />
+      <created>1694608947159</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1694608947159</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Clean-up code and enhance application security">
+      <option name="closed" value="true" />
+      <created>1694609087272</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1694609087272</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1694609254762</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1694609254762</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Update index.php">
+      <option name="closed" value="true" />
+      <created>1694609652839</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1694609652839</updated>
+    </task>
+    <task id="LOCAL-00061" summary="edit htaccess">
+      <option name="closed" value="true" />
+      <created>1694610106701</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1694610106701</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -724,12 +767,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed img src for HomeContent image" />
-    <MESSAGE value="Fixed img src for HomeContent image (with /)" />
-    <MESSAGE value="Fixing routes test" />
-    <MESSAGE value="edit routes.yaml and url settings" />
-    <MESSAGE value="edit routes.yaml" />
-    <MESSAGE value="Add symfony apache-pack" />
     <MESSAGE value="test phpinfo()" />
     <MESSAGE value="Fix contact route" />
     <MESSAGE value="Design Optimization" />
@@ -749,7 +786,13 @@
     <MESSAGE value="Fixing form.js cards style" />
     <MESSAGE value="Add Readme.md" />
     <MESSAGE value="Change carousel images aspect ratio on mobile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change carousel images aspect ratio on mobile" />
+    <MESSAGE value="Edit gitIgnore" />
+    <MESSAGE value="Edit car-carousel-img css" />
+    <MESSAGE value="Clean-up code and enhance application security" />
+    <MESSAGE value="Edit .htaccess" />
+    <MESSAGE value="Update index.php" />
+    <MESSAGE value="edit htaccess" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit htaccess" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

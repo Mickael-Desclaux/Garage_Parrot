@@ -27,14 +27,13 @@ class UserCrudController extends AbstractCrudController implements EventSubscrib
         return User::class;
     }
 
-    
     public function configureFields(string $pageName): iterable
     {
         yield EmailField::new('email')->setLabel('Adresse E-Mail');
         yield TextField::new('password')->setLabel('Mot de passe')->hideOnIndex();
     }
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
             BeforeEntityPersistedEvent::class => ['hashPassword'],

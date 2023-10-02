@@ -43,16 +43,13 @@ class CarController extends AbstractController
     {
         $filter = $request->request->all();
         $cars = $carRepository->findCarsByFilter($filter);
-
         $carData = [];
         foreach ($cars as $car) {
-
             $images = $car->getCarImages();
             $firstImage = null;
             if (count($images) > 0) {
                 $firstImage = $images[0]->getName();
             }
-
             $carData[] = [
                 'price' => $car->getPrice(),
                 'model' => $car->getModel(),
@@ -67,10 +64,7 @@ class CarController extends AbstractController
                 'detailLink' => $this->generateUrl('voiture_detail', ['id' => $car->getId()]),
             ];
         }
-
         $totalCars = count($cars);
-
-
         return new JsonResponse([
             'car' => $carData,
             'total_cars' => $totalCars

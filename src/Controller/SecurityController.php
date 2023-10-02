@@ -14,7 +14,6 @@ class SecurityController extends AbstractController
     public function login(AuthenticationUtils $authenticationUtils, Request $request)
     {
         if ($this->getUser()) {
-            // redirect to some 'already logged in' page or wherever you want.
             return $this->redirect($this->generateUrl('home'));
         }
 
@@ -31,7 +30,6 @@ class SecurityController extends AbstractController
         }
 
         $form = $this->createForm(LoginType::class);
-
         $form->handleRequest($request);
 
         return $this->render('security/login.html.twig', [
@@ -44,6 +42,7 @@ class SecurityController extends AbstractController
     #[Route('/déconnexion', name: 'logout')]
     public function logout()
     {
+
     }
 }
 
