@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="Refactor code for improved readability and optimisation">
+    <list default="true" id="43a0d735-d92b-4fbe-a491-3f09e79bae5b" name="Changes" comment="edit framework.yaml">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventListener/RedirectToHttpsListener.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/car/detail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/car/detail.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,6 +258,17 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-4deba68a3988-com.jetbrains.php.sharedIndexes-PS-233.8264.9" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -337,263 +349,18 @@
       <workItem from="1695991304275" duration="592000" />
       <workItem from="1695998019493" duration="137000" />
       <workItem from="1696004862975" duration="20000" />
-      <workItem from="1696229875875" duration="4086000" />
-    </task>
-    <task id="LOCAL-00014" summary="Add Procfile for Heroku deployment">
-      <option name="closed" value="true" />
-      <created>1689014892014</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1689014892014</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Edit Procfile">
-      <option name="closed" value="true" />
-      <created>1689056066385</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1689056066385</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Edit Procfile">
-      <option name="closed" value="true" />
-      <created>1689057065503</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1689057065503</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Edit Procfile">
-      <option name="closed" value="true" />
-      <created>1689057826028</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1689057826028</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Edit Procfile">
-      <option name="closed" value="true" />
-      <created>1689058094395</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1689058094395</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Edit Procfile">
-      <option name="closed" value="true" />
-      <created>1689058279590</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1689058279590</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Update database connection in .env">
-      <option name="closed" value="true" />
-      <created>1689059183454</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1689059183454</updated>
-    </task>
-    <task id="LOCAL-00021" summary="New SQL connection">
-      <option name="closed" value="true" />
-      <created>1689061608368</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1689061608369</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Switch to prod env">
-      <option name="closed" value="true" />
-      <created>1689061687394</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1689061687394</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Edit connection string">
-      <option name="closed" value="true" />
-      <created>1689061928492</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1689061928492</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Edit connection string">
-      <option name="closed" value="true" />
-      <created>1689064207158</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1689064207158</updated>
-    </task>
-    <task id="LOCAL-00025" summary="add symfony/intl package">
-      <option name="closed" value="true" />
-      <created>1689064729406</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1689064729406</updated>
-    </task>
-    <task id="LOCAL-00026" summary="add ext-intl to composer.json">
-      <option name="closed" value="true" />
-      <created>1689065207012</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1689065207012</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Add Heroku buildpack to composer.json">
-      <option name="closed" value="true" />
-      <created>1689065652571</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1689065652571</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Moved Heroku buildpack to require-dev">
-      <option name="closed" value="true" />
-      <created>1689066064626</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1689066064626</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Fixed img src for HomeContent image">
-      <option name="closed" value="true" />
-      <created>1689066621086</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1689066621086</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Fixed img src for HomeContent image (with /)">
-      <option name="closed" value="true" />
-      <created>1689066828543</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1689066828543</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Fixing routes test">
-      <option name="closed" value="true" />
-      <created>1689067434101</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1689067434101</updated>
-    </task>
-    <task id="LOCAL-00032" summary="edit routes.yaml and url settings">
-      <option name="closed" value="true" />
-      <created>1689067981349</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1689067981349</updated>
-    </task>
-    <task id="LOCAL-00033" summary="edit routes.yaml">
-      <option name="closed" value="true" />
-      <created>1689068432425</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1689068432425</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Add symfony apache-pack">
-      <option name="closed" value="true" />
-      <created>1689069289279</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1689069289279</updated>
-    </task>
-    <task id="LOCAL-00035" summary="test phpinfo()">
-      <option name="closed" value="true" />
-      <created>1689069437204</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1689069437204</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Fix contact route">
-      <option name="closed" value="true" />
-      <created>1689071398725</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1689071398725</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Design Optimization">
-      <option name="closed" value="true" />
-      <created>1689078430154</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1689078430154</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Set APP_ENV to prod">
-      <option name="closed" value="true" />
-      <created>1689078536366</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1689078536367</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Review page design optimization">
-      <option name="closed" value="true" />
-      <created>1689078806884</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1689078806884</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Edit font-size for better responsiveness">
-      <option name="closed" value="true" />
-      <created>1689085077634</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1689085077634</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Fixing responsive issues">
-      <option name="closed" value="true" />
-      <created>1689091076195</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1689091076195</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Switching to prod env">
-      <option name="closed" value="true" />
-      <created>1689091139399</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1689091139399</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Edit HtaAccess">
-      <option name="closed" value="true" />
-      <created>1689175963070</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1689175963070</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Switch .env to prod">
-      <option name="closed" value="true" />
-      <created>1689176150431</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1689176150431</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Switching to prod database">
-      <option name="closed" value="true" />
-      <created>1689178376241</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1689178376241</updated>
+      <workItem from="1696229875875" duration="13277000" />
+      <workItem from="1696320380130" duration="121000" />
+      <workItem from="1696320508873" duration="881000" />
+      <workItem from="1696327272273" duration="668000" />
+      <workItem from="1696330621238" duration="12000" />
+      <workItem from="1696330638680" duration="46000" />
+      <workItem from="1696330693486" duration="97000" />
+      <workItem from="1696330797102" duration="1883000" />
+      <workItem from="1696332711199" duration="825000" />
+      <workItem from="1696334144521" duration="41000" />
+      <workItem from="1696432613263" duration="1349000" />
+      <workItem from="1696496546497" duration="2490000" />
     </task>
     <task id="LOCAL-00046" summary="Code refactor">
       <option name="closed" value="true" />
@@ -731,7 +498,263 @@
       <option name="project" value="LOCAL" />
       <updated>1696233304453</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="edit https redirection rules">
+      <option name="closed" value="true" />
+      <created>1696234362129</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1696234362129</updated>
+    </task>
+    <task id="LOCAL-00064" summary="edit https redirection rules">
+      <option name="closed" value="true" />
+      <created>1696234438789</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1696234438789</updated>
+    </task>
+    <task id="LOCAL-00065" summary="fix rewrite engine">
+      <option name="closed" value="true" />
+      <created>1696234568243</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1696234568243</updated>
+    </task>
+    <task id="LOCAL-00066" summary="delete require https in security.yaml">
+      <option name="closed" value="true" />
+      <created>1696234667783</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1696234667783</updated>
+    </task>
+    <task id="LOCAL-00067" summary="delete require https in security.yaml">
+      <option name="closed" value="true" />
+      <created>1696234836422</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1696234836422</updated>
+    </task>
+    <task id="LOCAL-00068" summary="edit .htacces">
+      <option name="closed" value="true" />
+      <created>1696234890652</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1696234890652</updated>
+    </task>
+    <task id="LOCAL-00069" summary="edit .htacces">
+      <option name="closed" value="true" />
+      <created>1696235232583</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1696235232583</updated>
+    </task>
+    <task id="LOCAL-00070" summary="edit .htacces">
+      <option name="closed" value="true" />
+      <created>1696235602884</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1696235602884</updated>
+    </task>
+    <task id="LOCAL-00071" summary="edit .htacces">
+      <option name="closed" value="true" />
+      <created>1696235787483</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1696235787483</updated>
+    </task>
+    <task id="LOCAL-00072" summary="edit .htacces">
+      <option name="closed" value="true" />
+      <created>1696236164188</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1696236164188</updated>
+    </task>
+    <task id="LOCAL-00073" summary="HTTPS redirection fixing">
+      <option name="closed" value="true" />
+      <created>1696236857907</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1696236857907</updated>
+    </task>
+    <task id="LOCAL-00074" summary="HTTPS redirection fixing">
+      <option name="closed" value="true" />
+      <created>1696237851532</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1696237851532</updated>
+    </task>
+    <task id="LOCAL-00075" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696238408556</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1696238408556</updated>
+    </task>
+    <task id="LOCAL-00076" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696238627353</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1696238627353</updated>
+    </task>
+    <task id="LOCAL-00077" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696238997090</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1696238997090</updated>
+    </task>
+    <task id="LOCAL-00078" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696239282072</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1696239282072</updated>
+    </task>
+    <task id="LOCAL-00079" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696239857550</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1696239857550</updated>
+    </task>
+    <task id="LOCAL-00080" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696240137338</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1696240137338</updated>
+    </task>
+    <task id="LOCAL-00081" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696240329986</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1696240329986</updated>
+    </task>
+    <task id="LOCAL-00082" summary="edit .htaccess and framework.yaml">
+      <option name="closed" value="true" />
+      <created>1696240701654</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1696240701654</updated>
+    </task>
+    <task id="LOCAL-00083" summary="edit framework.yaml">
+      <option name="closed" value="true" />
+      <created>1696240756918</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1696240756918</updated>
+    </task>
+    <task id="LOCAL-00084" summary="edit framework.yaml">
+      <option name="closed" value="true" />
+      <created>1696240922140</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1696240922140</updated>
+    </task>
+    <task id="LOCAL-00085" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696240953001</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1696240953001</updated>
+    </task>
+    <task id="LOCAL-00086" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696244890209</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1696244890209</updated>
+    </task>
+    <task id="LOCAL-00087" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696244999510</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1696244999511</updated>
+    </task>
+    <task id="LOCAL-00088" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696245152057</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1696245152057</updated>
+    </task>
+    <task id="LOCAL-00089" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696245333431</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1696245333431</updated>
+    </task>
+    <task id="LOCAL-00090" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696245725769</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1696245725769</updated>
+    </task>
+    <task id="LOCAL-00091" summary="edit .htaccess">
+      <option name="closed" value="true" />
+      <created>1696245807750</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1696245807750</updated>
+    </task>
+    <task id="LOCAL-00092" summary="test">
+      <option name="closed" value="true" />
+      <created>1696246247445</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1696246247445</updated>
+    </task>
+    <task id="LOCAL-00093" summary="test">
+      <option name="closed" value="true" />
+      <created>1696246309325</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1696246309325</updated>
+    </task>
+    <task id="LOCAL-00094" summary="edit framework.yaml">
+      <option name="closed" value="true" />
+      <created>1696332643436</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1696332643436</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -752,15 +775,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fix contact route" />
-    <MESSAGE value="Design Optimization" />
-    <MESSAGE value="Set APP_ENV to prod" />
-    <MESSAGE value="Review page design optimization" />
-    <MESSAGE value="Edit font-size for better responsiveness" />
-    <MESSAGE value="Fixing responsive issues" />
-    <MESSAGE value="Switching to prod env" />
-    <MESSAGE value="Edit HtaAccess" />
-    <MESSAGE value="Switch .env to prod" />
     <MESSAGE value="Switching to prod database" />
     <MESSAGE value="Code refactor" />
     <MESSAGE value="Fixing routes.yaml" />
@@ -777,7 +791,16 @@
     <MESSAGE value="Update index.php" />
     <MESSAGE value="edit htaccess" />
     <MESSAGE value="Refactor code for improved readability and optimisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor code for improved readability and optimisation" />
+    <MESSAGE value="edit https redirection rules" />
+    <MESSAGE value="fix rewrite engine" />
+    <MESSAGE value="delete require https in security.yaml" />
+    <MESSAGE value="edit .htacces" />
+    <MESSAGE value="HTTPS redirection fixing" />
+    <MESSAGE value="edit .htaccess and framework.yaml" />
+    <MESSAGE value="edit .htaccess" />
+    <MESSAGE value="test" />
+    <MESSAGE value="edit framework.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit framework.yaml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

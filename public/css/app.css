@@ -129,8 +129,8 @@ h5 {
 }
 
 #car_filter_brand, #car_filter_energy, #car_filter_gearbox, #car_filter_doors {
-    margin-left: 1em;
-    width: 86%;
+    margin-left: 0.7em;
+    width: 87%;
 }
 
 #car_filter_price, #car_filter_year, #car_filter_mileage, #car_filter_horsepower {
@@ -138,7 +138,8 @@ h5 {
 }
 
 .filter-btn {
-    width: 100%;
+    width: 90%;
+    margin: 0.5em;
 }
 
 #myBtn {
@@ -288,8 +289,8 @@ h5 {
 @media (max-width: 991px) {
 
     #car_filter_brand, #car_filter_energy, #car_filter_gearbox, #car_filter_doors {
-        margin-left: 0.5em;
-        width: 75%;
+        margin-left: 0.4em;
+        width: 72%;
     }
 
     .btn-danger {
@@ -321,7 +322,7 @@ h5 {
     }
 
     .table-label {
-        padding-right: 15em;
+        padding-right: 10em;
     }
 
     .table-label, .table-value {
@@ -355,10 +356,15 @@ h5 {
 
     .filter-btn {
         margin-top: 1vmax;
+        width: 72%;
     }
 
     .nav-link {
         font-size: 2vmax;
+    }
+
+    .mobile-card-detail {
+        width: 25em;
     }
 
     .car-card-title > h1 {
@@ -377,9 +383,11 @@ h5 {
         font-size: 1.2vmax;
     }
 
-    .car-carousel-img {
-        aspect-ratio: 1;
-        width: 100%;
+    #car-carousel {
+        height : 25em;
+        width: 25em;
+        margin-left: 1em;
+        margin-right: 1em;
     }
 
     #myBtn {
