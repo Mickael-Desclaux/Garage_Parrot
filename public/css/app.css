@@ -142,8 +142,8 @@ h5 {
 }
 
 .filter-btn {
-    width: 90%;
-    margin: 0.5em;
+    width: 100%;
+    font-size: 0.8em;
 }
 
 #myBtn {
