@@ -137,6 +137,10 @@ h5 {
     width: 90%;
 }
 
+#mobile-filter {
+    border-radius: 0.5em;
+}
+
 .filter-btn {
     width: 90%;
     margin: 0.5em;
@@ -365,22 +369,24 @@ h5 {
 
     .mobile-card-detail {
         width: 25em;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
     .car-card-title > h1 {
-        font-size: 2vmax;
+        font-size: 1.5em;
     }
 
     .car-card-title > h2 {
-        font-size: 1.8vmax;
+        font-size: 1.2em;
     }
 
     .car-card-title > h4 {
-        font-size: 1.5vmax;
+        font-size: 1em;
     }
 
     .car-card-title > .btn {
-        font-size: 1.2vmax;
+        font-size: 1em;
     }
 
     #car-carousel {
