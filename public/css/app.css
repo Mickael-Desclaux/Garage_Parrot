@@ -374,19 +374,19 @@ h5 {
     }
 
     .car-card-title > h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     .car-card-title > h2 {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     .car-card-title > h4 {
-        font-size: 1em;
+        font-size: 1.3em;
     }
 
     .car-card-title > .btn {
-        font-size: 1em;
+        font-size: 1.3em;
     }
 
     #car-carousel {
@@ -407,6 +407,10 @@ h5 {
     form .offcanvas-body {
         display: flex;
         justify-content: center;
+    }
+
+    .review-card {
+        width: 80%;
     }
 }
 
