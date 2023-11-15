@@ -23,8 +23,8 @@ class HomeContentCrudController extends AbstractCrudController
         yield TextEditorField::new('content')->setLabel('Section de texte');
         yield ImageField::new('image')
             ->setLabel('Image')
-            ->setBasePath('public/images/home/content')
-            ->setUploadDir('images/home/content');
+            ->setBasePath('images/home/content')
+            ->setUploadDir('public/images/home/content');
         yield IntegerField::new('displayOrder')->setLabel('Ordre d\'affichage');
     }
 
