@@ -12,21 +12,22 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 
 class HomeContentCrudController extends AbstractCrudController
-{   
+{
     public static function getEntityFqcn(): string
     {
         return HomeContent::class;
     }
-    
+
     public function configureFields(string $pageName): iterable
     {
         yield TextEditorField::new('content')->setLabel('Section de texte');
         yield ImageField::new('image')
-        ->setLabel('Image')
-        ->setUploadDir('public/images/home/content');
+            ->setLabel('Image')
+            ->setBasePath('public/images/home/content')
+            ->setUploadDir('images/home/content');
         yield IntegerField::new('displayOrder')->setLabel('Ordre d\'affichage');
     }
-    
+
     public function configureActions(Actions $actions): Actions
     {
         return $actions

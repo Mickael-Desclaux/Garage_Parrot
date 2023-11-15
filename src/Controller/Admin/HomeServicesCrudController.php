@@ -28,6 +28,7 @@ class HomeServicesCrudController extends AbstractCrudController
             ->setNumDecimals('2');
         yield ImageField::new('image')
             ->setUploadDir('public/images/home/services')
+            ->setBasePath('images/home/services')
             ->setLabel('Image');
     }
 
